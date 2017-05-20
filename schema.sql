@@ -1,6 +1,6 @@
 --all locations of QR codes
 CREATE TABLE locations (
-	locationId SERIAL VARCHAR(64) PRIMARY KEY
+	locationId VARCHAR(64) PRIMARY KEY
 	diagram VARCHAR(128)
 )
 
