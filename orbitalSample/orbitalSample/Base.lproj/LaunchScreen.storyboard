@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="rVj-wm-2iv">
+                                <rect key="frame" x="84" y="206" width="207" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="f4Z-A1-x2Z"/>
+                                    <constraint firstAttribute="width" constant="207" id="ihr-eT-QyK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkb-zR-oc3">
+                                <rect key="frame" x="56" y="342" width="262" height="120"/>
+                                <string key="text">Shopping Mall Assistant
+     with Route Tracker</string>
+                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="fkb-zR-oc3" secondAttribute="bottom" constant="205" id="1YQ-Zx-kEu"/>
+                            <constraint firstItem="rVj-wm-2iv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QQa-5b-6AX"/>
+                            <constraint firstItem="fkb-zR-oc3" firstAttribute="centerX" secondItem="rVj-wm-2iv" secondAttribute="centerX" id="SfI-en-MPC"/>
+                            <constraint firstItem="rVj-wm-2iv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-68.5" id="XJ5-iE-Xaa"/>
+                            <constraint firstItem="fkb-zR-oc3" firstAttribute="top" secondItem="rVj-wm-2iv" secondAttribute="bottom" constant="18" id="cfl-Gp-5wg"/>
+                            <constraint firstItem="rVj-wm-2iv" firstAttribute="leading" secondItem="fkb-zR-oc3" secondAttribute="trailing" constant="-234" id="ms3-Bg-nmX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="530" height="306"/>
+    </resources>
+</document>
