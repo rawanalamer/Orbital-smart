@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB30FB2E1EDF6F36009AF125 /* DirectoryResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30FB2D1EDF6F36009AF125 /* DirectoryResultsViewController.swift */; };
 		E0B6EC161ED928C8005EBE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6EC151ED928C8005EBE9B /* AppDelegate.swift */; };
 		E0B6EC181ED928C8005EBE9B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6EC171ED928C8005EBE9B /* FirstViewController.swift */; };
 		E0B6EC1A1ED928C8005EBE9B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6EC191ED928C8005EBE9B /* SecondViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB30FB2D1EDF6F36009AF125 /* DirectoryResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryResultsViewController.swift; sourceTree = "<group>"; };
 		E0B6EC121ED928C8005EBE9B /* orbitalSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orbitalSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B6EC151ED928C8005EBE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B6EC171ED928C8005EBE9B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				E0B6EC1E1ED928C8005EBE9B /* Assets.xcassets */,
 				E0B6EC201ED928C8005EBE9B /* LaunchScreen.storyboard */,
 				E0B6EC231ED928C8005EBE9B /* Info.plist */,
+				BB30FB2D1EDF6F36009AF125 /* DirectoryResultsViewController.swift */,
 			);
 			path = orbitalSample;
 			sourceTree = "<group>";
@@ -196,7 +199,7 @@
 				TargetAttributes = {
 					E0B6EC111ED928C8005EBE9B = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3PP6NQDSH9;
+						DevelopmentTeam = L82V4A9654;
 						ProvisioningStyle = Automatic;
 					};
 					E0B6EC271ED928C9005EBE9B = {
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B6EC1A1ED928C8005EBE9B /* SecondViewController.swift in Sources */,
+				BB30FB2E1EDF6F36009AF125 /* DirectoryResultsViewController.swift in Sources */,
 				E0B6EC161ED928C8005EBE9B /* AppDelegate.swift in Sources */,
 				E0B6EC181ED928C8005EBE9B /* FirstViewController.swift in Sources */,
 			);
@@ -417,10 +421,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3PP6NQDSH9;
+				DEVELOPMENT_TEAM = L82V4A9654;
 				INFOPLIST_FILE = orbitalSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test.orbitalSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test.orbitalSampl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -430,10 +435,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3PP6NQDSH9;
+				DEVELOPMENT_TEAM = L82V4A9654;
 				INFOPLIST_FILE = orbitalSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test.orbitalSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test.orbitalSampl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -512,6 +518,7 @@
 				E0B6EC3E1ED928C9005EBE9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0B6EC3F1ED928C9005EBE9B /* Build configuration list for PBXNativeTarget "orbitalSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +527,7 @@
 				E0B6EC411ED928C9005EBE9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0B6EC421ED928C9005EBE9B /* Build configuration list for PBXNativeTarget "orbitalSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +536,7 @@
 				E0B6EC441ED928C9005EBE9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
