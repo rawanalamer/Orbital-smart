@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPe-vT-rec">
-                                <rect key="frame" x="142" y="246" width="85" height="25.5"/>
+                                <rect key="frame" x="163" y="246" width="85" height="25.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="90" translatesAutoresizingMaskIntoConstraints="NO" id="qH0-CF-VPJ">
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="25.5"/>
@@ -56,7 +56,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AHd-oQ-n0F">
-                                <rect key="frame" x="81" y="107" width="207" height="118"/>
+                                <rect key="frame" x="102" y="107" width="207" height="118"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-9d-mar">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="118"/>
@@ -73,7 +73,7 @@
                             <constraint firstItem="jyp-mL-Lyu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="3fb-lX-e62"/>
                             <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Lg6-d3-DzY"/>
                             <constraint firstItem="mcD-Se-4MK" firstAttribute="top" secondItem="jyp-mL-Lyu" secondAttribute="bottom" constant="16" id="OCe-aQ-DYp"/>
-                            <constraint firstItem="SPe-vT-rec" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="142" id="Umr-CO-BiQ"/>
+                            <constraint firstItem="SPe-vT-rec" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="163" id="Umr-CO-BiQ"/>
                             <constraint firstItem="jyp-mL-Lyu" firstAttribute="top" secondItem="SPe-vT-rec" secondAttribute="bottom" constant="36" id="ZKt-0e-vHd"/>
                             <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="mcD-Se-4MK" secondAttribute="centerX" id="fuz-CD-ecP"/>
                             <constraint firstItem="SPe-vT-rec" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="246" id="ncR-kX-wet"/>
@@ -105,20 +105,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="taX-dT-d9G">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="taX-dT-d9G">
                                 <rect key="frame" x="163" y="87" width="48" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myC-gF-R5E">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myC-gF-R5E">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="myC-gF-R5E" firstAttribute="centerY" secondItem="taX-dT-d9G" secondAttribute="centerY" id="TjE-Fc-ij7"/>
+                                    <constraint firstItem="myC-gF-R5E" firstAttribute="centerX" secondItem="taX-dT-d9G" secondAttribute="centerX" id="dh7-Ae-iGb"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="taX-dT-d9G" firstAttribute="top" secondItem="PQf-hY-pI3" secondAttribute="bottom" constant="23" id="SJP-nq-GwX"/>
+                            <constraint firstItem="taX-dT-d9G" firstAttribute="centerX" secondItem="0QX-hS-gN3" secondAttribute="centerX" id="tIx-3b-VOG"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="resultLabel" destination="myC-gF-R5E" id="XVm-Nh-17z"/>
@@ -128,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="2472.8000000000002" y="-331.48425787106447"/>
         </scene>
-        <!--Second-->
+        <!--Mall Navigation-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
@@ -162,7 +169,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Mall Navigation" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,11 +194,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--First-->
+        <!--Directory-->
         <scene sceneID="trd-qO-uVy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7nt-nR-j6p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Directory" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AKd-vF-myL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -15,18 +15,10 @@
 		E0B6EC1F1ED928C8005EBE9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B6EC1E1ED928C8005EBE9B /* Assets.xcassets */; };
 		E0B6EC221ED928C8005EBE9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B6EC201ED928C8005EBE9B /* LaunchScreen.storyboard */; };
 		E0B6EC2D1ED928C9005EBE9B /* orbitalSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6EC2C1ED928C9005EBE9B /* orbitalSampleTests.swift */; };
-		E0B6EC381ED928C9005EBE9B /* orbitalSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6EC371ED928C9005EBE9B /* orbitalSampleUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		E0B6EC291ED928C9005EBE9B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E0B6EC0A1ED928C8005EBE9B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E0B6EC111ED928C8005EBE9B;
-			remoteInfo = orbitalSample;
-		};
-		E0B6EC341ED928C9005EBE9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E0B6EC0A1ED928C8005EBE9B /* Project object */;
 			proxyType = 1;
@@ -48,7 +40,6 @@
 		E0B6EC281ED928C9005EBE9B /* orbitalSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = orbitalSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B6EC2C1ED928C9005EBE9B /* orbitalSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orbitalSampleTests.swift; sourceTree = "<group>"; };
 		E0B6EC2E1ED928C9005EBE9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0B6EC331ED928C9005EBE9B /* orbitalSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = orbitalSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B6EC371ED928C9005EBE9B /* orbitalSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orbitalSampleUITests.swift; sourceTree = "<group>"; };
 		E0B6EC391ED928C9005EBE9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,13 +53,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E0B6EC251ED928C9005EBE9B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0B6EC301ED928C9005EBE9B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,7 +77,6 @@
 			children = (
 				E0B6EC121ED928C8005EBE9B /* orbitalSample.app */,
 				E0B6EC281ED928C9005EBE9B /* orbitalSampleTests.xctest */,
-				E0B6EC331ED928C9005EBE9B /* orbitalSampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,24 +152,6 @@
 			productReference = E0B6EC281ED928C9005EBE9B /* orbitalSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E0B6EC321ED928C9005EBE9B /* orbitalSampleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E0B6EC421ED928C9005EBE9B /* Build configuration list for PBXNativeTarget "orbitalSampleUITests" */;
-			buildPhases = (
-				E0B6EC2F1ED928C9005EBE9B /* Sources */,
-				E0B6EC301ED928C9005EBE9B /* Frameworks */,
-				E0B6EC311ED928C9005EBE9B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E0B6EC351ED928C9005EBE9B /* PBXTargetDependency */,
-			);
-			name = orbitalSampleUITests;
-			productName = orbitalSampleUITests;
-			productReference = E0B6EC331ED928C9005EBE9B /* orbitalSampleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,15 +164,10 @@
 				TargetAttributes = {
 					E0B6EC111ED928C8005EBE9B = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = L82V4A9654;
+						DevelopmentTeam = 3PP6NQDSH9;
 						ProvisioningStyle = Automatic;
 					};
 					E0B6EC271ED928C9005EBE9B = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = E0B6EC111ED928C8005EBE9B;
-					};
-					E0B6EC321ED928C9005EBE9B = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E0B6EC111ED928C8005EBE9B;
@@ -229,7 +189,6 @@
 			targets = (
 				E0B6EC111ED928C8005EBE9B /* orbitalSample */,
 				E0B6EC271ED928C9005EBE9B /* orbitalSampleTests */,
-				E0B6EC321ED928C9005EBE9B /* orbitalSampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,13 +205,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E0B6EC261ED928C9005EBE9B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0B6EC311ED928C9005EBE9B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,14 +233,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0B6EC2F1ED928C9005EBE9B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E0B6EC381ED928C9005EBE9B /* orbitalSampleUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,11 +240,6 @@
 			isa = PBXTargetDependency;
 			target = E0B6EC111ED928C8005EBE9B /* orbitalSample */;
 			targetProxy = E0B6EC291ED928C9005EBE9B /* PBXContainerItemProxy */;
-		};
-		E0B6EC351ED928C9005EBE9B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E0B6EC111ED928C8005EBE9B /* orbitalSample */;
-			targetProxy = E0B6EC341ED928C9005EBE9B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -421,11 +360,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L82V4A9654;
+				DEVELOPMENT_TEAM = 3PP6NQDSH9;
 				INFOPLIST_FILE = orbitalSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test.orbitalSampl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test.orbitalSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -435,11 +374,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L82V4A9654;
+				DEVELOPMENT_TEAM = 3PP6NQDSH9;
 				INFOPLIST_FILE = orbitalSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test.orbitalSampl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test.orbitalSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -473,32 +412,6 @@
 			};
 			name = Release;
 		};
-		E0B6EC431ED928C9005EBE9B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = orbitalSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = orbital2017test.orbitalSampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = orbitalSample;
-			};
-			name = Debug;
-		};
-		E0B6EC441ED928C9005EBE9B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = orbitalSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = orbital2017test.orbitalSampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = orbitalSample;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -525,15 +438,6 @@
 			buildConfigurations = (
 				E0B6EC401ED928C9005EBE9B /* Debug */,
 				E0B6EC411ED928C9005EBE9B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E0B6EC421ED928C9005EBE9B /* Build configuration list for PBXNativeTarget "orbitalSampleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E0B6EC431ED928C9005EBE9B /* Debug */,
-				E0B6EC441ED928C9005EBE9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
