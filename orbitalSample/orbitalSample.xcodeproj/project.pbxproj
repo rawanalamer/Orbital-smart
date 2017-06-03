@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB30FB2E1EDF6F36009AF125 /* DirectoryResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30FB2D1EDF6F36009AF125 /* DirectoryResultsViewController.swift */; };
+		BB4444CC1EE2765A00D501A6 /* StoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4444CB1EE2765A00D501A6 /* StoreTableViewController.swift */; };
 		E0B6EC161ED928C8005EBE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6EC151ED928C8005EBE9B /* AppDelegate.swift */; };
 		E0B6EC181ED928C8005EBE9B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6EC171ED928C8005EBE9B /* FirstViewController.swift */; };
 		E0B6EC1A1ED928C8005EBE9B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6EC191ED928C8005EBE9B /* SecondViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		BB30FB2D1EDF6F36009AF125 /* DirectoryResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryResultsViewController.swift; sourceTree = "<group>"; };
+		BB4444CB1EE2765A00D501A6 /* StoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTableViewController.swift; sourceTree = "<group>"; };
 		E0B6EC121ED928C8005EBE9B /* orbitalSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orbitalSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B6EC151ED928C8005EBE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B6EC171ED928C8005EBE9B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				E0B6EC201ED928C8005EBE9B /* LaunchScreen.storyboard */,
 				E0B6EC231ED928C8005EBE9B /* Info.plist */,
 				BB30FB2D1EDF6F36009AF125 /* DirectoryResultsViewController.swift */,
+				BB4444CB1EE2765A00D501A6 /* StoreTableViewController.swift */,
 			);
 			path = orbitalSample;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				BB30FB2E1EDF6F36009AF125 /* DirectoryResultsViewController.swift in Sources */,
 				E0B6EC161ED928C8005EBE9B /* AppDelegate.swift in Sources */,
 				E0B6EC181ED928C8005EBE9B /* FirstViewController.swift in Sources */,
+				BB4444CC1EE2765A00D501A6 /* StoreTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
