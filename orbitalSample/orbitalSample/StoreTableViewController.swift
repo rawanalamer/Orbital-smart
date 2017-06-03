@@ -52,7 +52,7 @@ class StoreTableViewController: UITableViewController {
         return values.count
     }
     
-    func tableView(listOfStores: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+     func tableView(listOfStores: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = listOfStores.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
         let mainData = values[indexPath.row]
         cell.name.text = mainData["name"] as? String

@@ -190,7 +190,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Carpark Navigation" id="FNf-1N-GXF"/>
+                    <tabBarItem key="tabBarItem" title="Carpark Navigation" image="rsz_car-xxl" id="FNf-1N-GXF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3B-w7-5EN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,7 +230,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mall Navigation" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Mall Navigation" image="rsz_8850-200" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -291,7 +291,7 @@
         <scene sceneID="trd-qO-uVy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7nt-nR-j6p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Directory" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Directory" image="rsz_1directory" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AKd-vF-myL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -308,8 +308,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
         <image name="logo" width="530" height="306"/>
-        <image name="second" width="30" height="30"/>
+        <image name="rsz_1directory" width="25" height="25"/>
+        <image name="rsz_8850-200" width="25" height="25"/>
+        <image name="rsz_car-xxl" width="25" height="25"/>
     </resources>
 </document>
