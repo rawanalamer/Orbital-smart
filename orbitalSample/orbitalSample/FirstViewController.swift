@@ -14,6 +14,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var directoryLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var storesButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,5 +30,7 @@ class FirstViewController: UIViewController {
         
     }
 
+    @IBAction func storesButtonTouch(_ sender: Any) {
+    }
 }
 

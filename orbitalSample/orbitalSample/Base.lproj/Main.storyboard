@@ -36,14 +36,8 @@
                                     <constraint firstItem="qH0-CF-VPJ" firstAttribute="centerX" secondItem="SPe-vT-rec" secondAttribute="centerX" id="6zg-Vb-ptO"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyp-mL-Lyu">
-                                <rect key="frame" x="84" y="308" width="207" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mcD-Se-4MK">
-                                <rect key="frame" x="164" y="354" width="48" height="30"/>
+                                <rect key="frame" x="163.5" y="353.5" width="48" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UY6-ND-ZQm">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
@@ -67,10 +61,57 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyp-mL-Lyu">
+                                <rect key="frame" x="81" y="298" width="207" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fhD-es-ixr">
+                                <rect key="frame" x="142" y="403.5" width="92" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="skB-eE-oVA">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MkR-Zg-eg5">
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KFx-vj-C1C">
+                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xM6-Jn-8GX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugd-xq-82P">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                                                        <state key="normal" title="See all stores"/>
+                                                                        <connections>
+                                                                            <action selector="storesButtonTouch:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Dyj-Nb-GDd"/>
+                                                                            <segue destination="HfG-fS-TEd" kind="show" id="zuz-ol-QBR"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="KFx-vj-C1C" firstAttribute="centerX" secondItem="MkR-Zg-eg5" secondAttribute="centerX" id="fZL-pX-1oA"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="skB-eE-oVA" firstAttribute="centerY" secondItem="fhD-es-ixr" secondAttribute="centerY" id="aAr-1M-3An"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jyp-mL-Lyu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="3fb-lX-e62"/>
+                            <constraint firstItem="fhD-es-ixr" firstAttribute="leading" secondItem="SPe-vT-rec" secondAttribute="leading" id="3tC-DI-9rR"/>
+                            <constraint firstItem="fhD-es-ixr" firstAttribute="top" secondItem="mcD-Se-4MK" secondAttribute="bottom" constant="20" id="GK6-kT-0aR"/>
                             <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Lg6-d3-DzY"/>
                             <constraint firstItem="mcD-Se-4MK" firstAttribute="top" secondItem="jyp-mL-Lyu" secondAttribute="bottom" constant="16" id="OCe-aQ-DYp"/>
                             <constraint firstItem="SPe-vT-rec" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="142" id="Umr-CO-BiQ"/>
@@ -86,6 +127,7 @@
                         <outlet property="directoryLabel" destination="qH0-CF-VPJ" id="7dZ-Tc-oLJ"/>
                         <outlet property="logoImage" destination="bQx-9d-mar" id="PiC-JW-ymJ"/>
                         <outlet property="searchButton" destination="UY6-ND-ZQm" id="e7Z-5f-K6Y"/>
+                        <outlet property="storesButton" destination="ugd-xq-82P" id="thG-9c-AXh"/>
                         <outlet property="textField" destination="jyp-mL-Lyu" id="bKd-LH-egb"/>
                     </connections>
                 </viewController>
@@ -167,6 +209,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Store Table View Controller-->
+        <scene sceneID="Mw5-DE-EXl">
+            <objects>
+                <tableViewController id="HfG-fS-TEd" customClass="StoreTableViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ovs-fd-hps">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ds8-GG-c7X">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ds8-GG-c7X" id="TkL-x6-T5V">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HfG-fS-TEd" id="1qd-A4-JWP"/>
+                            <outlet property="delegate" destination="HfG-fS-TEd" id="LkK-5i-jYO"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="Ovs-fd-hps" id="wrt-AC-Bxz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qe2-xt-DUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1735" y="396"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
