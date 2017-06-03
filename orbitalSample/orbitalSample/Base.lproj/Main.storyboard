@@ -61,14 +61,14 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyp-mL-Lyu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyp-mL-Lyu">
                                 <rect key="frame" x="81" y="298" width="207" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fhD-es-ixr">
-                                <rect key="frame" x="142" y="403.5" width="92" height="30"/>
+                                <rect key="frame" x="163" y="403.5" width="92" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="skB-eE-oVA">
                                         <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
@@ -109,14 +109,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="3fb-lX-e62"/>
+                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="65" id="3fb-lX-e62"/>
                             <constraint firstItem="fhD-es-ixr" firstAttribute="leading" secondItem="SPe-vT-rec" secondAttribute="leading" id="3tC-DI-9rR"/>
                             <constraint firstItem="fhD-es-ixr" firstAttribute="top" secondItem="mcD-Se-4MK" secondAttribute="bottom" constant="20" id="GK6-kT-0aR"/>
-                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Lg6-d3-DzY"/>
-                            <constraint firstItem="mcD-Se-4MK" firstAttribute="top" secondItem="jyp-mL-Lyu" secondAttribute="bottom" constant="16" id="OCe-aQ-DYp"/>
+                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" constant="-3" id="Lg6-d3-DzY"/>
+                            <constraint firstItem="mcD-Se-4MK" firstAttribute="top" secondItem="jyp-mL-Lyu" secondAttribute="bottom" constant="25.5" id="OCe-aQ-DYp"/>
                             <constraint firstItem="SPe-vT-rec" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="163" id="Umr-CO-BiQ"/>
-                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="top" secondItem="SPe-vT-rec" secondAttribute="bottom" constant="36" id="ZKt-0e-vHd"/>
-                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="mcD-Se-4MK" secondAttribute="centerX" id="fuz-CD-ecP"/>
+                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="top" secondItem="SPe-vT-rec" secondAttribute="bottom" constant="26.5" id="ZKt-0e-vHd"/>
+                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="mcD-Se-4MK" secondAttribute="centerX" constant="-3" id="fuz-CD-ecP"/>
                             <constraint firstItem="SPe-vT-rec" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="246" id="ncR-kX-wet"/>
                             <constraint firstItem="SPe-vT-rec" firstAttribute="top" secondItem="AHd-oQ-n0F" secondAttribute="bottom" constant="21" id="pFA-n4-4zx"/>
                             <constraint firstItem="SPe-vT-rec" firstAttribute="centerX" secondItem="AHd-oQ-n0F" secondAttribute="centerX" id="q27-3z-zhr"/>
@@ -176,6 +176,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XwM-Xe-TEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2472.8000000000002" y="-331.48425787106447"/>
+        </scene>
+        <!--Carpark Navigation -->
+        <scene sceneID="k4j-bz-TME">
+            <objects>
+                <viewController title="Carpark Navigation " id="LUD-TN-k2z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kVw-tr-OhZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7eo-G9-8KK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9G6-jT-NPh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Carpark Navigation" id="FNf-1N-GXF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3B-w7-5EN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="879"/>
         </scene>
         <!--Mall Navigation-->
         <scene sceneID="wg7-f3-ORb">
@@ -261,6 +280,7 @@
                     <connections>
                         <segue destination="7nt-nR-j6p" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="LUD-TN-k2z" kind="relationship" relationship="viewControllers" id="PRw-M4-ZdL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
