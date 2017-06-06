@@ -47,7 +47,7 @@ class StoreModel: NSObject {
     //prints object's current state
     
     override var description: String {
-        return "Name: \(name), Unit: \(unit), Opening: \(opening), Website: \(website), Number: \(number), Description: \(descrp), diagram: \(diagram)"
+        return "Name: \(String(describing: name)), Unit: \(String(describing: unit)), Opening: \(String(describing: opening)), Website: \(String(describing: website)), Number: \(String(describing: number)), Description: \(String(describing: descrp)), diagram: \(String(describing: diagram))"
         
     }
 

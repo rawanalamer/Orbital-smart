@@ -21,7 +21,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     
     var data : NSMutableData = NSMutableData()
     
-    let urlPath: String = "file:///Users/rrwan/Orbital-smart/orbitalSample/orbitalSample/listAllStores.php" //this will be changed to the path where service.php lives
+    let urlPath: String = "file:///Users/anusree/Desktop/Orbital/orbitalSample/orbitalSample/listAllStores2.php" //this will be changed to the path where service.php lives
 
     func downloadItems() {
         
@@ -68,7 +68,6 @@ class HomeModel: NSObject, URLSessionDataDelegate {
         var jsonElement: NSDictionary = NSDictionary()
         let stores: NSMutableArray = NSMutableArray()
         
-        var num = 0
         
         for num in 0..<jsonResult.count{
 
