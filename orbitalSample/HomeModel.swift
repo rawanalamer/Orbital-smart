@@ -21,16 +21,16 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     
     var data : NSMutableData = NSMutableData()
     
-    let urlPath: String = "file:///Users/anusree/Desktop/Orbital/orbitalSample/orbitalSample/listAllStores2.php" //this will be changed to the path where service.php lives
+    let urlPath: String = "http://localhost:8080/listAllStores2.php" //this will be changed to the path where service.php lives
 
     func downloadItems() {
         
         let url: NSURL = NSURL(string: urlPath)!
         var session: URLSession!
-        _ = URLSessionConfiguration.default
+        let configuration = URLSessionConfiguration.default
         
         
-        session = URLSession()
+        session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
         
         let task = session.dataTask(with: url as URL)
         
@@ -55,10 +55,11 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     
     func parseJSON() {
         
-        var jsonResult: NSMutableArray = NSMutableArray()
+        var jsonResult = NSArray()
         
-        do{
-            jsonResult = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSMutableArray
+        do {
+            jsonResult = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSArray
+
             
         } catch let error as NSError {
             print(error)
@@ -71,7 +72,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
         
         for num in 0..<jsonResult.count{
 
-            
+            print("it works")
             jsonElement = jsonResult[num] as! NSDictionary
             
             let store = StoreModel()
