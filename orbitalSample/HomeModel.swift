@@ -72,7 +72,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
         
         for num in 0..<jsonResult.count{
 
-            print("it works")
+            
             jsonElement = jsonResult[num] as! NSDictionary
             
             let store = StoreModel()
@@ -97,6 +97,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
                 
             }
             stores.add(store)
+            
         }
         
         DispatchQueue.main.async(execute: { () -> Void in
