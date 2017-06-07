@@ -24,7 +24,7 @@ class StoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
-        
+
         let homeModel = HomeModel()
         homeModel.delegate = self
         homeModel.downloadItems()

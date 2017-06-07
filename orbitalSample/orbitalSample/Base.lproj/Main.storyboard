@@ -179,8 +179,6 @@
                     <connections>
                         <outlet property="listTableView" destination="uF3-kc-wrN" id="91w-Pv-2Lc"/>
                         <outlet property="name" destination="tnm-wS-QgO" id="wNZ-id-SnZ"/>
-                        <outlet property="storeCell" destination="uF3-kc-wrN" id="tIQ-LK-EXq"/>
-                        <outlet property="tableView" destination="uF3-kc-wrN" id="H9x-rj-7Qe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cW6-8c-eTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
