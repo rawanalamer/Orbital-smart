@@ -6,7 +6,7 @@
 //  Copyright © 2017 orbitalstaff. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class StoreModel: NSObject {
     
@@ -47,7 +47,7 @@ class StoreModel: NSObject {
     //prints object's current state
     
     override var description: String {
-        return "Name: \(String(describing: name)), Unit: \(String(describing: unit)), Opening: \(String(describing: opening)), Website: \(String(describing: website)), Number: \(String(describing: number)), Description: \(String(describing: descrp)), diagram: \(String(describing: diagram))"
+        return "Name: \(name), Unit: \(unit), Opening Hours: \(opening), Webisite: \(website), Number: \(number), Description: \(descrp), Diagram: \(diagram)"
         
     }
 

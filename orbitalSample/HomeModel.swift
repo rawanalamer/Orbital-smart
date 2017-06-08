@@ -39,7 +39,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     }
     
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
-        self.data.append(data as Data);
+        self.data.append(data);
         
     }
     
@@ -72,20 +72,19 @@ class HomeModel: NSObject, URLSessionDataDelegate {
         
         for num in 0..<jsonResult.count{
 
-            
             jsonElement = jsonResult[num] as! NSDictionary
             
             let store = StoreModel()
             
             //the following insures none of the JsonElement values are nil through optional binding
-            if let name = jsonElement["Name"] as? String,
-                let unit = jsonElement["Unit"] as? String,
-                let opening = jsonElement["Opening Hours"] as? String,
-                let website = jsonElement["Website"] as? String,
-                let number = jsonElement["Number"] as? String,
-                let descrp = jsonElement["Description"] as? String,
-                let diagram = jsonElement["Diagram"] as? String
-            {
+                let name = jsonElement["name"] as? String
+                let unit = jsonElement["unit"] as? String
+                let opening = jsonElement["opening"] as? String
+                let website = jsonElement["website"] as? String
+                let number = jsonElement["number"] as? String
+                let descrp = jsonElement["description"] as? String
+                let diagram = jsonElement["diagram"] as? String
+            
                 
                 store.name = name
                 store.unit = unit
@@ -95,9 +94,8 @@ class HomeModel: NSObject, URLSessionDataDelegate {
                 store.descrp = descrp
                 store.diagram = diagram
                 
-            }
-            stores.add(store)
             
+            stores.add(store)
         }
         
         DispatchQueue.main.async(execute: { () -> Void in

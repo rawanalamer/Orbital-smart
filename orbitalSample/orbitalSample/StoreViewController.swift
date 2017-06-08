@@ -49,7 +49,7 @@ class StoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Get the location to be shown
         let item: StoreModel = feedItems[indexPath.row] as! StoreModel
         // Get references to labels of cell
-        myCell.textLabel!.text = item.name
+        myCell.textLabel!.text = item.name 
         print(myCell)
         return myCell
     }
