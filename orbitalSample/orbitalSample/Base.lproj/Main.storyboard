@@ -23,21 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPe-vT-rec">
-                                <rect key="frame" x="163" y="246" width="85" height="25.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="90" translatesAutoresizingMaskIntoConstraints="NO" id="qH0-CF-VPJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="85" height="25.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <color key="textColor" red="0.88228626943005184" green="0.32503663334768429" blue="0.30278143467405089" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="qH0-CF-VPJ" firstAttribute="centerX" secondItem="SPe-vT-rec" secondAttribute="centerX" id="6zg-Vb-ptO"/>
-                                </constraints>
+                                <rect key="frame" x="163" y="246" width="85" height="26"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mcD-Se-4MK">
-                                <rect key="frame" x="166.5" y="353.5" width="48" height="30"/>
+                                <rect key="frame" x="167" y="354" width="48" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UY6-ND-ZQm">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
@@ -50,16 +39,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AHd-oQ-n0F">
-                                <rect key="frame" x="102" y="107" width="207" height="118"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-9d-mar">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="118"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="118" id="SqD-ir-fnA"/>
-                                            <constraint firstAttribute="width" constant="207" id="zFj-7Z-BMk"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
+                                <rect key="frame" x="-60" y="-81" width="118" height="207"/>
                             </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyp-mL-Lyu">
                                 <rect key="frame" x="81" y="298" width="213" height="30"/>
@@ -68,58 +48,74 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fhD-es-ixr">
-                                <rect key="frame" x="163" y="403.5" width="92" height="30"/>
+                                <rect key="frame" x="163" y="404" width="92" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="skB-eE-oVA">
-                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MkR-Zg-eg5">
-                                                <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KFx-vj-C1C">
-                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="50"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xM6-Jn-8GX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugd-xq-82P">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
-                                                                        <state key="normal" title="See all stores"/>
-                                                                        <connections>
-                                                                            <action selector="storesButtonTouch:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Dyj-Nb-GDd"/>
-                                                                            <segue destination="5jN-vv-zap" kind="show" id="x8P-k6-zqY"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
+                                                                <rect key="frame" x="0.0" y="0.0" width="92" height="50"/>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="KFx-vj-C1C" firstAttribute="centerX" secondItem="MkR-Zg-eg5" secondAttribute="centerX" id="fZL-pX-1oA"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="skB-eE-oVA" firstAttribute="centerY" secondItem="fhD-es-ixr" secondAttribute="centerY" id="aAr-1M-3An"/>
-                                </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="90" translatesAutoresizingMaskIntoConstraints="NO" id="qH0-CF-VPJ">
+                                <rect key="frame" x="149" y="254.5" width="85" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.88228626943005184" green="0.32503663334768429" blue="0.30278143467405089" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-9d-mar">
+                                <rect key="frame" x="97" y="120" width="180" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="H3D-oz-48H"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugd-xq-82P">
+                                <rect key="frame" x="149" y="399" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="See all stores"/>
+                                <connections>
+                                    <action selector="storesButtonTouch:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Dyj-Nb-GDd"/>
+                                    <segue destination="5jN-vv-zap" kind="show" id="x8P-k6-zqY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="65" id="3fb-lX-e62"/>
-                            <constraint firstItem="fhD-es-ixr" firstAttribute="leading" secondItem="SPe-vT-rec" secondAttribute="leading" id="3tC-DI-9rR"/>
-                            <constraint firstItem="fhD-es-ixr" firstAttribute="top" secondItem="mcD-Se-4MK" secondAttribute="bottom" constant="20" id="GK6-kT-0aR"/>
-                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Lg6-d3-DzY"/>
-                            <constraint firstItem="mcD-Se-4MK" firstAttribute="top" secondItem="jyp-mL-Lyu" secondAttribute="bottom" constant="25.5" id="OCe-aQ-DYp"/>
-                            <constraint firstItem="SPe-vT-rec" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="163" id="Umr-CO-BiQ"/>
-                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="top" secondItem="SPe-vT-rec" secondAttribute="bottom" constant="26.5" id="ZKt-0e-vHd"/>
-                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="mcD-Se-4MK" secondAttribute="centerX" constant="-3" id="fuz-CD-ecP"/>
-                            <constraint firstItem="SPe-vT-rec" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="246" id="ncR-kX-wet"/>
-                            <constraint firstItem="SPe-vT-rec" firstAttribute="top" secondItem="AHd-oQ-n0F" secondAttribute="bottom" constant="21" id="pFA-n4-4zx"/>
-                            <constraint firstItem="SPe-vT-rec" firstAttribute="centerX" secondItem="AHd-oQ-n0F" secondAttribute="centerX" id="q27-3z-zhr"/>
+                            <constraint firstItem="bQx-9d-mar" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="56" id="1dA-0X-9KD"/>
+                            <constraint firstItem="fhD-es-ixr" firstAttribute="top" secondItem="mcD-Se-4MK" secondAttribute="bottom" constant="20" id="30G-yl-BYb"/>
+                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="top" secondItem="qH0-CF-VPJ" secondAttribute="bottom" constant="18" id="3k9-VI-Eg1"/>
+                            <constraint firstItem="AHd-oQ-n0F" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-76" id="61E-ul-wCC"/>
+                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="top" secondItem="SPe-vT-rec" secondAttribute="bottom" constant="26" id="9ZG-ey-zqM"/>
+                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="65" id="CUV-XV-cff"/>
+                            <constraint firstItem="bQx-9d-mar" firstAttribute="leading" secondItem="AHd-oQ-n0F" secondAttribute="trailing" constant="39" id="Dfe-44-78X"/>
+                            <constraint firstItem="mcD-Se-4MK" firstAttribute="centerX" secondItem="qH0-CF-VPJ" secondAttribute="centerX" id="GIc-gU-XLg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bQx-9d-mar" secondAttribute="trailing" constant="82" id="KG6-8q-4cP"/>
+                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Osd-ee-dPE"/>
+                            <constraint firstItem="SPe-vT-rec" firstAttribute="top" secondItem="bQx-9d-mar" secondAttribute="bottom" constant="8" symbolic="YES" id="VgA-2t-ugq"/>
+                            <constraint firstItem="SPe-vT-rec" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="163" id="Ygw-ih-7dP"/>
+                            <constraint firstItem="AHd-oQ-n0F" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="-81" id="b05-Bu-Kxl"/>
+                            <constraint firstItem="mcD-Se-4MK" firstAttribute="top" secondItem="jyp-mL-Lyu" secondAttribute="bottom" constant="26" id="eHl-dc-AQY"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="AHd-oQ-n0F" secondAttribute="bottom" constant="492" id="eql-t0-UPg"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="fhD-es-ixr" secondAttribute="bottom" constant="164" id="f2p-cZ-JyS"/>
+                            <constraint firstAttribute="trailing" secondItem="SPe-vT-rec" secondAttribute="trailing" constant="127" id="gVd-Vk-DnP"/>
+                            <constraint firstItem="mcD-Se-4MK" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="354" id="jfx-fK-ne1"/>
+                            <constraint firstAttribute="trailing" secondItem="fhD-es-ixr" secondAttribute="trailing" constant="120" id="oL9-OB-sje"/>
+                            <constraint firstItem="mcD-Se-4MK" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="167" id="paa-xm-d0k"/>
+                            <constraint firstItem="jyp-mL-Lyu" firstAttribute="centerX" secondItem="bQx-9d-mar" secondAttribute="centerX" id="r82-Cv-kAv"/>
+                            <constraint firstItem="SPe-vT-rec" firstAttribute="leading" secondItem="fhD-es-ixr" secondAttribute="leading" id="w8o-8t-8jp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QSV-vT-yr8"/>
