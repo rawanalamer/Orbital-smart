@@ -6,15 +6,16 @@
 //  Copyright © 2017 orbitalstaff. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class StoreDetailsController: UIViewController {
+    
     var selectedStore : StoreModel?
-    var resultLabel: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     
@@ -23,10 +24,17 @@ class StoreDetailsController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    func viewDidAppear() {
-        resultLabel.text = "hello"
+    override func viewDidAppear(_ animated: Bool) {
+        resultLabel.text = self.selectedStore?.description
+        
+        /*resultLabel.text = self.selectedStore?.unit
+        resultLabel.text = self.selectedStore?.opening
+        resultLabel.text = self.selectedStore?.number
+        resultLabel.text = self.selectedStore?.website
+        resultLabel.text = self.selectedStore?.descrp
+        resultLabel.text = self.selectedStore?.diagram*/
     }
+
     
     /*
      // MARK: - Navigation

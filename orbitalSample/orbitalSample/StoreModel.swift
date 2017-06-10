@@ -29,7 +29,6 @@ class StoreModel: NSObject {
         
     }
     
-    //construct with @name, @address, @latitude, and @longitude parameters
     
     init(name: String, unit: String, opening: String, website: String, number: String, descrp: String, diagram: String) {
         
@@ -47,7 +46,7 @@ class StoreModel: NSObject {
     //prints object's current state
     
     override var description: String {
-        return "Name: \(name), Unit: \(unit), Opening Hours: \(opening), Webisite: \(website), Number: \(number), Description: \(descrp), Diagram: \(diagram)"
+        return "Name: \(name), Unit: \(unit), Opening Hours: \(opening), Website: \(website), Number: \(number), Description: \(descrp), Diagram: \(diagram)"
         
     }
 

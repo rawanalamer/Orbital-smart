@@ -70,6 +70,7 @@ class StoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Set the property to the selected location so when the view for
         // detail view controller loads, it can access that property to get the feeditem obj
         detailVC.selectedStore = selectedStore
+        
     }
     
 

@@ -325,7 +325,7 @@
         <!--Store Details Controller-->
         <scene sceneID="958-vd-ZwX">
             <objects>
-                <viewController id="Xye-r5-lnS" customClass="StoreDetailsController" sceneMemberID="viewController">
+                <viewController id="Xye-r5-lnS" customClass="StoreDetailsController" customModule="orbitalSample" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ofp-8l-Gkt"/>
                         <viewControllerLayoutGuide type="bottom" id="zyB-MV-Dac"/>
@@ -333,12 +333,24 @@
                     <view key="view" contentMode="scaleToFill" id="oC9-ca-KgK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Store details " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1x-xo-8vb">
+                                <rect key="frame" x="135" y="166" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="d1x-xo-8vb" id="Gw5-XH-Nys"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9H-xK-qnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473" y="341"/>
+            <point key="canvasLocation" x="2472.8000000000002" y="340.47976011994007"/>
         </scene>
     </scenes>
     <resources>
