@@ -16,6 +16,7 @@ class StoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     var feedItems: NSArray = NSArray()
     var selectedStore : StoreModel = StoreModel()
     @IBOutlet weak var listTableView: UITableView!
+    var tapped: ((StoreModel) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +47,29 @@ class StoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
-        // Get the location to be shown
+        // Get the store to be shown
         let item: StoreModel = feedItems[indexPath.row] as! StoreModel
+        
         // Get references to labels of cell
-        myCell.textLabel!.text = item.name 
-        print(myCell)
+        myCell.textLabel!.text = item.name
+        //print(myCell)
         return myCell
+    }
+
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Set selected location to var
+        selectedStore = feedItems[indexPath.row] as! StoreModel
+        // Manually call segue to detail view controller
+        self.performSegue(withIdentifier: "detailSegue", sender: self)
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        // Get reference to the destination view controller
+        let detailVC  = segue!.destination as! StoreDetailsController
+        // Set the property to the selected location so when the view for
+        // detail view controller loads, it can access that property to get the feeditem obj
+        detailVC.selectedStore = selectedStore
     }
     
 

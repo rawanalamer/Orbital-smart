@@ -33,7 +33,7 @@
                                         <state key="normal" title="Search"/>
                                         <connections>
                                             <action selector="searchButtonTouch:" destination="9pv-A4-QxB" eventType="touchUpInside" id="twh-p4-PC4"/>
-                                            <segue destination="53f-1V-4OS" kind="show" id="xtt-bl-OOk"/>
+                                            <segue destination="53f-1V-4OS" kind="show" identifier="directorySegue" id="xtt-bl-OOk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -88,7 +88,7 @@
                                 <state key="normal" title="See all stores"/>
                                 <connections>
                                     <action selector="storesButtonTouch:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Dyj-Nb-GDd"/>
-                                    <segue destination="5jN-vv-zap" kind="show" id="x8P-k6-zqY"/>
+                                    <segue destination="5jN-vv-zap" kind="show" identifier="storeSegue" id="x8P-k6-zqY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -175,11 +175,12 @@
                     <connections>
                         <outlet property="listTableView" destination="uF3-kc-wrN" id="91w-Pv-2Lc"/>
                         <outlet property="name" destination="tnm-wS-QgO" id="wNZ-id-SnZ"/>
+                        <segue destination="Xye-r5-lnS" kind="show" identifier="detailSegue" id="AgY-aX-YQB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cW6-8c-eTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1735.2" y="341.37931034482762"/>
+            <point key="canvasLocation" x="1700" y="402"/>
         </scene>
         <!--Directory Results View Controller-->
         <scene sceneID="UUO-Fh-1Ws">
@@ -320,6 +321,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4SV-T7-f1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="796" y="-330.58470764617692"/>
+        </scene>
+        <!--Store Details Controller-->
+        <scene sceneID="958-vd-ZwX">
+            <objects>
+                <viewController id="Xye-r5-lnS" customClass="StoreDetailsController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ofp-8l-Gkt"/>
+                        <viewControllerLayoutGuide type="bottom" id="zyB-MV-Dac"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oC9-ca-KgK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V9H-xK-qnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="341"/>
         </scene>
     </scenes>
     <resources>
