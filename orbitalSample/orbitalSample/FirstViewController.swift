@@ -26,11 +26,53 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func searchButtonTouch(_ sender: Any) {
+    @IBAction func searchButtonTouch(_ sender: UIStoryboardSegue) {
+        let viewControllerB = DirectoryResultsViewController()
+        if textField.text == nil{
+            viewControllerB.search = "Store does not exist"
+        }
+        else{
+            viewControllerB.search = textField.text!
+        }
+        viewControllerB.delegate = self
+        navigationController?.pushViewController(viewControllerB, animated: true)
         
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        var DestViewController : DirectoryResultsViewController = segue.destination as! DirectoryResultsViewController
+//        DestViewController.search = textField.text!
+//        
+//    }
+    
 
+    
     @IBAction func storesButtonTouch(_ sender: Any) {
+    }
+    
+    func isStringEmpty( stringValue:String) -> Bool
+    {
+        var stringValue = stringValue
+        var returnValue = false
+        
+        if stringValue.isEmpty  == true
+        {
+            returnValue = true
+            return returnValue
+        }
+        
+        // Make sure user did not submit number of empty spaces
+        stringValue = stringValue.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        
+        if(stringValue.isEmpty == true)
+        {
+            returnValue = true
+            return returnValue
+            
+        }
+        
+        return returnValue
+        
     }
 }
 

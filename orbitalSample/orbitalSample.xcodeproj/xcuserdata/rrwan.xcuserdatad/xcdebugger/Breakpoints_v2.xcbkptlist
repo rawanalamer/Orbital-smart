@@ -42,45 +42,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeModel.swift"
-            timestampString = "518301107.63022"
+            timestampString = "518843317.216752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "parseJSON()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "orbitalSample.HomeModel.parseJSON () -&gt; ()"
-                  moduleName = "orbitalSample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/mampstack-7.1.4-0/apache2/htdocs/orbitalSample/HomeModel.swift"
-                  timestampString = "518326993.706435"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "11685">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "orbitalSample.HomeModel.(parseJSON () -&gt; ()).(closure #1)"
-                  moduleName = "orbitalSample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/mampstack-7.1.4-0/apache2/htdocs/orbitalSample/HomeModel.swift"
-                  timestampString = "518326993.709155"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "23">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "orbitalSample/DirectoryResultsViewController.swift"
+            timestampString = "518850382.654057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

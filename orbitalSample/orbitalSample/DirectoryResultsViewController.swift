@@ -8,29 +8,51 @@
 
 import UIKit
 
-class DirectoryResultsViewController: UIViewController {
+class DirectoryResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, HomeModelProtocal{
     @IBOutlet weak var resultLabel: UILabel!
+    var feedItems: NSArray = NSArray()
+    var selectedStore : StoreModel = StoreModel()
+    @IBOutlet weak var listTableView: UITableView!
+    weak var delegate: FirstViewController!
+    var search :String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set delegates and initialize homeModel
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+            self.listTableView.delegate = nil
+            self.listTableView.dataSource = self
+            
+            let homeModel = HomeModel()
+            homeModel.delegate = self
+            homeModel.downloadItems1(search: search)
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func itemsDownloaded(items: NSArray) {
+        
+        feedItems = items
+        self.listTableView.reloadData()
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Return the number of feed items
+        return feedItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Retrieve cell
+        let cellIdentifier: String = "BasicCell"
+        let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
+        // Get the store to be shown
+        let item: StoreModel = feedItems[indexPath.row] as! StoreModel
+        
+        // Get references to labels of cell
+        myCell.textLabel!.text = item.name
+        //print(myCell)
+        return myCell
+    }
 
 }
