@@ -13,23 +13,93 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
     var feedItems: NSArray = NSArray()
     var selectedStore : StoreModel = StoreModel()
     @IBOutlet weak var listTableView: UITableView!
-    weak var delegate: FirstViewController!
+    var data : NSMutableData = NSMutableData()
     var search :String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //set delegates and initialize homeModel
+        
+        resultLabel.text = search
+        
+        let myUrl : NSURL = NSURL(string:"http://localhost:8080/searchStore.php")!
+        
+        var json = ""
 
-            self.listTableView.delegate = nil
-            self.listTableView.dataSource = self
+        let request: NSMutableURLRequest = NSMutableURLRequest(url:(myUrl as NSURL) as URL);
+        
+        let postString = "name=\(search)";
+        
+        request.httpMethod = "POST";
+        
+        request.httpBody = postString.data(using: String.Encoding.utf8);
+        
+        NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main){
+            response, data, error in
             
-            let homeModel = HomeModel()
-            homeModel.delegate = self
-            homeModel.downloadItems1(search: search)
+            if data != nil {
+                json = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as! String
+            }
+            print(json)
+        }
+        
+        self.parseJSON()
         
         
     }
+    
+    
+    
+    func parseJSON() {
+        
+        var jsonResult = NSArray()
+        
+        do {
+            jsonResult = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSArray
+            
+            
+        } catch let error as NSError {
+            print(error)
+            
+        }
+        
+        var jsonElement: NSDictionary = NSDictionary()
+        let stores: NSMutableArray = NSMutableArray()
+        
+        
+        for num in 0..<jsonResult.count{
+            
+            jsonElement = jsonResult[num] as! NSDictionary
+            
+            let store = StoreModel()
+            
+            //the following insures none of the JsonElement values are nil through optional binding
+            let name = jsonElement["name"] as? String
+            let unit = jsonElement["unit"] as? String
+            let opening = jsonElement["opening"] as? String
+            let website = jsonElement["website"] as? String
+            let number = jsonElement["number"] as? String
+            let descrp = jsonElement["description"] as? String
+            let diagram = jsonElement["diagram"] as? String
+            
+            
+            store.name = name
+            store.unit = unit
+            store.opening = opening
+            store.website = website
+            store.number = number
+            store.descrp = descrp
+            store.diagram = diagram
+            
+            
+            stores.add(store)
+            
+            self.itemsDownloaded(items: stores)
+        }
+    }
+    
+
     
     func itemsDownloaded(items: NSArray) {
         

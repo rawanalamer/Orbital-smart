@@ -26,24 +26,29 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func searchButtonTouch(_ sender: UIStoryboardSegue) {
-        let viewControllerB = DirectoryResultsViewController()
-        if textField.text == nil{
-            viewControllerB.search = "Store does not exist"
+    @IBAction func searchButtonTouch(_ sender: Any) {
+//        let myVC = storyboard?.instantiateViewController(withIdentifier: "DirectoryResultsViewController") as! DirectoryResultsViewController
+//        myVC.search = textField.text!
+//        navigationController?.pushViewController(myVC, animated: true)
+        
+        // Check if value from myTextField is not empty
+
+        
+        // Instantiate SecondViewController
+        let secondViewController = storyboard?.instantiateViewController(withIdentifier: "DirectoryResultsViewController") as! DirectoryResultsViewController
+        if textField.text?.isEmpty == true
+        {
+            secondViewController.search = "No such store exists"
         }
         else{
-            viewControllerB.search = textField.text!
+            secondViewController.search = textField.text
         }
-        viewControllerB.delegate = self
-        navigationController?.pushViewController(viewControllerB, animated: true)
+        
+        // Take user to SecondViewController
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+        
         
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        var DestViewController : DirectoryResultsViewController = segue.destination as! DirectoryResultsViewController
-//        DestViewController.search = textField.text!
-//        
-//    }
     
 
     

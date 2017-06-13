@@ -185,7 +185,7 @@
         <!--Directory Results View Controller-->
         <scene sceneID="UUO-Fh-1Ws">
             <objects>
-                <viewController id="53f-1V-4OS" customClass="DirectoryResultsViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DirectoryResultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="53f-1V-4OS" customClass="DirectoryResultsViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PQf-hY-pI3"/>
                         <viewControllerLayoutGuide type="bottom" id="8Mc-FY-p8C"/>
@@ -325,7 +325,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7nt-nR-j6p" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Directory" image="rsz_1directory" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AKd-vF-myL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AKd-vF-myL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
