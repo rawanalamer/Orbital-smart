@@ -15,6 +15,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var storesButton: UIButton!
+    var data : NSMutableData = NSMutableData()
+    let stores: NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,27 +29,27 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func searchButtonTouch(_ sender: Any) {
-//        let myVC = storyboard?.instantiateViewController(withIdentifier: "DirectoryResultsViewController") as! DirectoryResultsViewController
-//        myVC.search = textField.text!
-//        navigationController?.pushViewController(myVC, animated: true)
+        let storeName = textField.text
+        let myUrl = URL(string:"http://localhost:8080/searchStore.php")
+        var request = URLRequest(url: myUrl!)
+        request.httpMethod = "POST"
+        let postString = "name=\(String(describing: storeName))"
+        request.httpBody = postString.data(using: .utf8)
+        let session = URLSession.shared
+        let task = session.dataTask(with: request){
+            data, response, error in
+            
+            if error != nil{
+                print("error=\(String(describing: error))")
+                return
+            }
+        }
         
-        // Check if value from myTextField is not empty
-
-        
-        // Instantiate SecondViewController
+        task.resume()
         let secondViewController = storyboard?.instantiateViewController(withIdentifier: "DirectoryResultsViewController") as! DirectoryResultsViewController
-        if textField.text?.isEmpty == true
-        {
-            secondViewController.search = "No such store exists"
-        }
-        else{
-            secondViewController.search = textField.text
-        }
-        
+        secondViewController.feedItems = stores
         // Take user to SecondViewController
         self.navigationController?.pushViewController(secondViewController, animated: true)
-        
-        
     }
     
 
@@ -55,29 +57,71 @@ class FirstViewController: UIViewController {
     @IBAction func storesButtonTouch(_ sender: Any) {
     }
     
-    func isStringEmpty( stringValue:String) -> Bool
-    {
-        var stringValue = stringValue
-        var returnValue = false
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        self.data.append(data);
         
-        if stringValue.isEmpty  == true
-        {
-            returnValue = true
-            return returnValue
+    }
+    
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        if error != nil {
+            print("Failed to download data")
+        }else {
+            print("Data downloaded")
+            self.parseJSON()
         }
         
-        // Make sure user did not submit number of empty spaces
-        stringValue = stringValue.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    }
+    
+    func parseJSON(){
+        var jsonResult = NSArray()
         
-        if(stringValue.isEmpty == true)
-        {
-            returnValue = true
-            return returnValue
+        do {
+            jsonResult = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSArray
+            
+            
+        } catch let error as NSError {
+            print(error)
             
         }
         
-        return returnValue
+        var jsonElement: NSDictionary = NSDictionary()
+        
+        
+        for num in 0..<jsonResult.count{
+            
+            jsonElement = jsonResult[num] as! NSDictionary
+            
+            let store = StoreModel()
+            
+            let message = jsonElement["message"] as? String
+            
+            if (message == "Success"){
+                
+                //the following insures none of the JsonElement values are nil through optional binding
+                let name = jsonElement["name"] as? String
+                let unit = jsonElement["unit"] as? String
+                let opening = jsonElement["opening"] as? String
+                let website = jsonElement["website"] as? String
+                let number = jsonElement["number"] as? String
+                let descrp = jsonElement["description"] as? String
+                let diagram = jsonElement["diagram"] as? String
+                
+                
+                store.name = name
+                store.unit = unit
+                store.opening = opening
+                store.website = website
+                store.number = number
+                store.descrp = descrp
+                store.diagram = diagram
+                
+                
+                stores.add(store)
+            }
+        }
         
     }
+    
+
 }
 
