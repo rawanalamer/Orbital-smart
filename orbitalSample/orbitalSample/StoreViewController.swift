@@ -62,15 +62,27 @@ class StoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         selectedStore = feedItems[indexPath.row] as! StoreModel
         // Manually call segue to detail view controller
         self.performSegue(withIdentifier: "detailSegue", sender: self)
+        print("performSegue works")
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+    /*func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        print("prepareForSegue works")
         // Get reference to the destination view controller
         let detailVC  = segue!.destination as! StoreDetailsController
         // Set the property to the selected location so when the view for
         // detail view controller loads, it can access that property to get the feeditem obj
         detailVC.selectedStore = selectedStore
         
+    }*/
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("prepareForSegue works")
+        if segue.identifier == "detailSegue", let destination = segue.destination as? StoreDetailsController {
+            if let cell = sender as? UITableViewCell, let indexPath = listTableView.indexPath(for: cell)  {
+                let selectedStore = feedItems[indexPath.row] as! StoreModel
+                destination.selectedStore = selectedStore
+            }
+        }
     }
     
 
