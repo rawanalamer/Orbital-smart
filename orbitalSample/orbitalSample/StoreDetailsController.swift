@@ -13,11 +13,26 @@ class StoreDetailsController: UIViewController {
     
     var selectedStore : StoreModel?
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var unitLabel: UILabel!
+    @IBOutlet weak var openingLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var descrpLabel: UILabel!
+    @IBOutlet weak var diagramLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(selectedStore?.name!)
+        resultLabel.text = "Name: " + (self.selectedStore?.name)!
+        unitLabel.text = "Unit: " + (self.selectedStore?.unit)!
+        openingLabel.text = "Opening Hours: " + (self.selectedStore?.opening)!
+        websiteLabel.text = "Website: " + (self.selectedStore?.website)!
+        numberLabel.text = "Number: " + (self.selectedStore?.number)!
+        descrpLabel.text = "About Us: " + (self.selectedStore?.descrp)!
+        descrpLabel.sizeToFit()
+        diagramLabel.text = self.selectedStore?.diagram
+        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,16 +40,6 @@ class StoreDetailsController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        resultLabel.text = self.selectedStore?.description
-        
-        /*resultLabel.text = self.selectedStore?.unit
-        resultLabel.text = self.selectedStore?.opening
-        resultLabel.text = self.selectedStore?.number
-        resultLabel.text = self.selectedStore?.website
-        resultLabel.text = self.selectedStore?.descrp
-        resultLabel.text = self.selectedStore?.diagram*/
-    }
 
     
     /*
