@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -401,40 +401,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store details " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmJ-Un-rlU">
-                                <rect key="frame" x="137" y="260" width="101" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store details " textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvo-Q9-yQO">
-                                <rect key="frame" x="137" y="323" width="100" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mk2-j0-9vj">
+                                <rect key="frame" x="30" y="400" width="315" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJS-3K-NkH">
+                                <rect key="frame" x="30" y="244" width="315" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6YI-qx-H6s" firstAttribute="centerX" secondItem="oC9-ca-KgK" secondAttribute="centerX" id="0OK-CQ-8dW"/>
-                            <constraint firstItem="Xvo-Q9-yQO" firstAttribute="centerX" secondItem="oC9-ca-KgK" secondAttribute="centerX" id="64s-VO-UIe"/>
-                            <constraint firstItem="zmJ-Un-rlU" firstAttribute="centerX" secondItem="oC9-ca-KgK" secondAttribute="centerX" id="7fg-2B-Bis"/>
                             <constraint firstItem="iSY-qr-H9G" firstAttribute="centerY" secondItem="oC9-ca-KgK" secondAttribute="centerY" constant="-166" id="I9o-qa-Zy1"/>
                             <constraint firstItem="d1x-xo-8vb" firstAttribute="centerX" secondItem="oC9-ca-KgK" secondAttribute="centerX" id="KOi-oT-0u8"/>
                             <constraint firstItem="L7Z-WM-USI" firstAttribute="centerY" secondItem="oC9-ca-KgK" secondAttribute="centerY" constant="-137" id="MIV-6a-iuU"/>
                             <constraint firstItem="6YI-qx-H6s" firstAttribute="centerY" secondItem="oC9-ca-KgK" secondAttribute="centerY" constant="-108" id="apT-fw-3eu"/>
                             <constraint firstItem="d1x-xo-8vb" firstAttribute="centerY" secondItem="oC9-ca-KgK" secondAttribute="centerY" constant="-224" id="i8Y-en-uRq"/>
                             <constraint firstItem="KXf-B0-Iva" firstAttribute="centerX" secondItem="oC9-ca-KgK" secondAttribute="centerX" id="pPx-8b-bXT"/>
-                            <constraint firstItem="zmJ-Un-rlU" firstAttribute="centerY" secondItem="oC9-ca-KgK" secondAttribute="centerY" constant="-63" id="slc-C5-beK"/>
-                            <constraint firstItem="Xvo-Q9-yQO" firstAttribute="centerY" secondItem="oC9-ca-KgK" secondAttribute="centerY" id="ut3-bf-6KR"/>
                             <constraint firstItem="iSY-qr-H9G" firstAttribute="centerX" secondItem="oC9-ca-KgK" secondAttribute="centerX" id="uub-PC-Hbp"/>
                             <constraint firstItem="L7Z-WM-USI" firstAttribute="centerX" secondItem="oC9-ca-KgK" secondAttribute="centerX" id="wIb-Sw-Ogk"/>
                             <constraint firstItem="KXf-B0-Iva" firstAttribute="centerY" secondItem="oC9-ca-KgK" secondAttribute="centerY" constant="-195" id="y4l-mP-fIe"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descrpLabel" destination="zmJ-Un-rlU" id="zgN-zj-uxP"/>
-                        <outlet property="diagramLabel" destination="Xvo-Q9-yQO" id="i9n-lk-aqw"/>
+                        <outlet property="descrpTextView" destination="bJS-3K-NkH" id="xTc-EX-rVb"/>
+                        <outlet property="diagramImage" destination="mk2-j0-9vj" id="lDn-ey-Y8w"/>
                         <outlet property="numberLabel" destination="6YI-qx-H6s" id="EnN-xN-fC0"/>
                         <outlet property="openingLabel" destination="iSY-qr-H9G" id="jxZ-r2-UQH"/>
                         <outlet property="resultLabel" destination="d1x-xo-8vb" id="Gw5-XH-Nys"/>

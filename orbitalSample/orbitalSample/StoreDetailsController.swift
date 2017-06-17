@@ -17,8 +17,9 @@ class StoreDetailsController: UIViewController {
     @IBOutlet weak var openingLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var descrpLabel: UILabel!
-    @IBOutlet weak var diagramLabel: UILabel!
+    @IBOutlet weak var descrpTextView: UITextView!
+    @IBOutlet weak var diagramImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +29,56 @@ class StoreDetailsController: UIViewController {
         openingLabel.text = "Opening Hours: " + (self.selectedStore?.opening)!
         websiteLabel.text = "Website: " + (self.selectedStore?.website)!
         numberLabel.text = "Number: " + (self.selectedStore?.number)!
-        descrpLabel.text = "About Us: " + (self.selectedStore?.descrp)!
-        descrpLabel.sizeToFit()
-        diagramLabel.text = self.selectedStore?.diagram
-        
+        descrpTextView.text = "About Us: " + (self.selectedStore?.descrp)!
 
+        let imageURL = self.selectedStore?.diagram
+        get_image(imageURL!, diagramImage)
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func get_image(_ url_str:String, _ imageView:UIImageView)
+    {
+        
+        let url:URL = URL(string: url_str)!
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (
+            data, response, error) in
+            
+            
+            if data != nil
+            {
+                let image = UIImage(data: data!)
+                
+                if(image != nil)
+                {
+                    
+                    DispatchQueue.main.async(execute: {
+                        
+                        imageView.image = image
+                        imageView.alpha = 0
+                        
+                        UIView.animate(withDuration: 2.5, animations: {
+                            imageView.alpha = 1.0
+                        })
+                        
+                    })
+                    
+                }
+                
+            }
+            
+            
+        })
+        
+        task.resume()
     }
     
 
