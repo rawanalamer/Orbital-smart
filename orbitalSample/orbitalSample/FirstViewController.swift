@@ -33,9 +33,12 @@ class FirstViewController: UIViewController {
         let myUrl = URL(string:"http://localhost:8080/searchStore.php")
         var request = URLRequest(url: myUrl!)
         request.httpMethod = "POST"
-        let postString = "name=\(String(describing: storeName))"
+        let postString = "name="+storeName!
+        print(postString)
         request.httpBody = postString.data(using: .utf8)
+        print("1")
         let session = URLSession.shared
+        print("2")
         let task = session.dataTask(with: request){
             data, response, error in
             
@@ -43,13 +46,14 @@ class FirstViewController: UIViewController {
                 print("error=\(String(describing: error))")
                 return
             }
+            
         }
-        
         task.resume()
         let secondViewController = storyboard?.instantiateViewController(withIdentifier: "DirectoryResultsViewController") as! DirectoryResultsViewController
         secondViewController.feedItems = stores
         // Take user to SecondViewController
         self.navigationController?.pushViewController(secondViewController, animated: true)
+        print("3")
     }
     
 
@@ -59,10 +63,12 @@ class FirstViewController: UIViewController {
     
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         self.data.append(data);
+        print("4")
         
     }
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        print("4")
         if error != nil {
             print("Failed to download data")
         }else {
