@@ -17,8 +17,6 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mysearchBar.delegate = self
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,6 +31,7 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
         let myCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        
         myCell.textLabel?.text = results[indexPath.row]
         
         return myCell
@@ -49,6 +48,7 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
         
     }
     func doSearch(searchWord: String){
+        
         mysearchBar.resignFirstResponder()
         
         let myURL = NSURL(string: "http://localhost:8080/searchStore.php")
