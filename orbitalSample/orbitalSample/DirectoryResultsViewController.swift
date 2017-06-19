@@ -17,6 +17,8 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mysearchBar.delegate = self
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,21 +29,25 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
         return results.count
     }
     
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        var myCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        let myCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        myCell.textLabel?.text = results[indexPath.row]
         
         return myCell
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
-        if(searchBar.text?.isEmpty)!{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        if(searchBar.text!.isEmpty)
+        {
             return
         }
+        
         doSearch(searchWord: searchBar.text!)
+        
     }
-    
     func doSearch(searchWord: String){
         mysearchBar.resignFirstResponder()
         
@@ -55,17 +61,58 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
         
         let task = URLSession.shared.dataTask(with: request, completionHandler:{ (data: Data?, response: URLResponse!, error: Error!) -> Void in
             
-            if error != nil{
-                return
+            DispatchQueue.main.async() {
+                
+                if error != nil{
+                    self.displayAlertMessage(userMessage: error.localizedDescription)
+                    return
+                }
+                do{
+                    var _: Error?
+                    //STOPPED HERE AS OF NOW
+                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+
+                    
+                    self.results.removeAll(keepingCapacity: false)
+                    self.tableView.reloadData()
+                    
+                    if let parseJSON = json{
+                        
+                        if let stores = parseJSON["stores"] as? [AnyObject]{
+                            
+                            for storeOjb in stores{
+                                let name = (storeOjb["name"] as! String)
+                                self.results.append(name)
+                            }
+                            
+                            self.tableView.reloadData()
+                            
+                        }else if(parseJSON["message"] != nil){
+                            
+                            let errorMessage = parseJSON["message"] as? String
+                            if(errorMessage != nil){
+                                self.displayAlertMessage(userMessage: errorMessage!)
+                                
+                            }
+                        }
+                    }
+                } catch {
+                    print(error)
+                }
             }
             
-            var err: Error?
-            //STOPPED HERE AS OF NOW
-            var json = JSONSerialization.jsonObject(with: data, options: .mutableContainers, error: &err)
         })
         
         task.resume()
     }
-
-
+    
+    func displayAlertMessage(userMessage: String)
+    {
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
+        let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(okAction);
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
+    
 }
