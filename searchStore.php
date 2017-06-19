@@ -2,28 +2,32 @@
 	require("Conn.php");
 	require("MySQLDao.php");
 
-	$name =htmlentities($_POST['name'];
-	$returnValue = array();
+    $returnValue = array();
 
-	if(empty($name){
-
-		$returnValue["message"]= "Missing required field";
+    if(empty($_POST["name"])){
+        $returnValue["message"]= "Missing required field";
 		echo json_encode($returnValue);
-		return;
-	}
-	$dao = new MySQLDao();
+		return;      
+    }
+    
+    $searchWord =htmlentities($_POST["name"];
+                              
+    $dao = new MySQLDao(Conn::$dbhost, Conn::$dbuser, Conn::$dbpass, Conn::$dbname);
 	$dao->openConnection();
-	$storeNames = $dao->searchStore($name);
+                              
+    $storeNames = $dao->searchStore($name);
+    $dao->closeConnection();
+                                                            
+    $returnValue["stores"]=$storeNames;                           
+    echo json_encode($returnValue);
 
-	if($storeNames.isEmpty){
+
+
+	/*if($storeNames.isEmpty){
 		$returnValue["message"] = "Store does not exist";
 		echo json_encode($returnValue);
 		return;
-	}
+	}*/
 
-	$returnValue = $storeNames
-	$returnValue["message"] = "Success"
-	echo json_encode($returnValue);
 
-    $dao->closeConnection();
 ?>

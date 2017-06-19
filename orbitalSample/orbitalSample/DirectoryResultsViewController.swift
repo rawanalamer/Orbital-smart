@@ -8,38 +8,64 @@
 
 import UIKit
 
-class DirectoryResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
-    @IBOutlet weak var resultLabel: UILabel!
-    var feedItems: NSArray = NSArray()
-    var selectedStore : StoreModel = StoreModel()
-    @IBOutlet weak var listTableView: UITableView!
-    var data : NSMutableData = NSMutableData()
-    var search :String?
+class DirectoryResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
+    
+    @IBOutlet weak var mysearchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    var results = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        resultLabel.text = "Results"
-        //set delegates and initialize homeModel
-        if(feedItems.count == 0){
-            resultLabel.text = "Store does not exist"
-        }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->UITableViewCell {
-        // Retrieve cell
-        let cellIdentifier: String = "BasicCell"
-        let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
-        // Get the store to be shown
-        let item: StoreModel = feedItems[indexPath.row] as! StoreModel
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return results.count
+    }
+    
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        // Get references to labels of cell
-        myCell.textLabel!.text = item.name
-        //print(myCell)
+        var myCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        
         return myCell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feedItems.count
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        if(searchBar.text?.isEmpty)!{
+            return
+        }
+        doSearch(searchWord: searchBar.text!)
     }
+    
+    func doSearch(searchWord: String){
+        mysearchBar.resignFirstResponder()
+        
+        let myURL = NSURL(string: "http://localhost:8080/searchStore.php")
+        
+        var request = URLRequest(url:myURL! as URL)
+        request.httpMethod = "POST"
+        
+        let postString = "name=\(searchWord)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        
+        let task = URLSession.shared.dataTask(with: request, completionHandler:{ (data: Data?, response: URLResponse!, error: Error!) -> Void in
+            
+            if error != nil{
+                return
+            }
+            
+            var err: Error?
+            //STOPPED HERE AS OF NOW
+            var json = JSONSerialization.jsonObject(with: data, options: .mutableContainers, error: &err)
+        })
+        
+        task.resume()
+    }
+
+
 }

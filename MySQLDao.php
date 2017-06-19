@@ -31,15 +31,21 @@ class MySQLDao {
 
 	public function searchStore($name){
 		$returnValue =  array();
-		$sql  = "SELECT * FROM stores s WHERE s.name LIKE '%', $name, '%'";
+		$sql  = "SELECT * FROM stores s WHERE s.name LIKE ? ";
 		$result = $this->conn->query($sql);
-		if ($result != null && (mysqli_num_rows($result) >= 1)) {
-			$row = $result->fetch_array(MYSQLI_ASSOC);
-			if (!empty($row)) {
-				$returnValue = $row;
-			}
-		}
-		return $returnValue
+        if(!$result)
+            throw new Exception($result->error);
+        $name = '%'.$name.'%';
+        $result->bind_param("ssi", $name);
+        $result->execute();
+        $result1 = $result->get_result();
+        
+        while($myrow = $result->fetch_assoc())
+        {
+            $returnValue[] = $myrow;
+        }
+
+		return $returnValue;
 	}
 
 }
