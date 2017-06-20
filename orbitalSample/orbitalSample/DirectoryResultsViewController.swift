@@ -44,17 +44,18 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
             return
         }
         
+        //mysearchBar.resignFirstResponder()
         doSearch(searchWord: searchBar.text!)
         
     }
     func doSearch(searchWord: String){
         
-        mysearchBar.resignFirstResponder()
         
         let myURL = NSURL(string: "http://localhost:8080/searchStore.php")
         
         var request = URLRequest(url:myURL! as URL)
         request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let postString = "name=\(searchWord)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
@@ -76,19 +77,22 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
                     self.results.removeAll(keepingCapacity: false)
                     self.tableView.reloadData()
                     
+                    print("1")
                     if let parseJSON = json{
                         
+                        print("2")
                         if let stores = parseJSON["stores"] as? [AnyObject]{
-                            
+                            print("3")
                             for storeOjb in stores{
                                 let name = (storeOjb["name"] as! String)
                                 self.results.append(name)
+                                print(name)
                             }
                             
                             self.tableView.reloadData()
                             
                         }else if(parseJSON["message"] != nil){
-                            
+                            print("4")
                             let errorMessage = parseJSON["message"] as? String
                             if(errorMessage != nil){
                                 self.displayAlertMessage(userMessage: errorMessage!)
