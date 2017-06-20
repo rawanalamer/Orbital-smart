@@ -32,13 +32,13 @@ class MySQLDao {
 	public function searchStore($name){
 		$returnValue =  array();
 		$sql  = "SELECT * FROM stores s WHERE s.name LIKE ? ";
-		$result = $this->conn->query($sql);
-        if(!$result)
-            throw new Exception($result->error);
-        $name = '%'.$name.'%';
+		$statement = $this->conn->prepare($sql);
+        if(!$statement)
+            throw new Exception($statement->error);
+        $name = '%' .$name. "%";
         $result->bind_param("ssi", $name);
         $result->execute();
-        $result1 = $result->get_result();
+        $result = $statement->get_result();
 
         while($myrow = $result->fetch_assoc())
         {
@@ -47,6 +47,7 @@ class MySQLDao {
 
 		return $returnValue;
 	}
+
 
 }
 ?>
