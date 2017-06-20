@@ -7,27 +7,23 @@
     if(empty($_POST["name"])){
         $returnValue["message"]= "Missing required field";
 		echo json_encode($returnValue);
-		return;      
+		return;
     }
-    
-    $searchWord =htmlentities($_POST["name"];
-                              
+
+    $searchWord =htmlentities($_POST["name"]);
+
     $dao = new MySQLDao(Conn::$dbhost, Conn::$dbuser, Conn::$dbpass, Conn::$dbname);
 	$dao->openConnection();
-                              
+
     $storeNames = $dao->searchStore($name);
     $dao->closeConnection();
-                                                            
-    $returnValue["stores"]=$storeNames;                           
+
+    $returnValue["stores"]=$storeNames;
     echo json_encode($returnValue);
 
 
 
-	/*if($storeNames.isEmpty){
-		$returnValue["message"] = "Store does not exist";
-		echo json_encode($returnValue);
-		return;
-	}*/
-
 
 ?>
+
+]

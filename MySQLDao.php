@@ -36,11 +36,11 @@ class MySQLDao {
         if(!$statement)
             throw new Exception($statement->error);
         $name = '%' .$name. "%";
-        $result->bind_param("ssi", $name);
+        $result->bind_param("s", $name);
         $result->execute();
         $result = $statement->get_result();
 
-        while($myrow = $result->fetch_assoc())
+        while($myrow = $result->fetch_object())
         {
             $returnValue[] = $myrow;
         }
