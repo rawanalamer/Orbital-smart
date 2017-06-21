@@ -11,13 +11,13 @@ import AVFoundation
 
 class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
-    @IBOutlet var messageLabel:UILabel!
+    
+    @IBOutlet weak var buttonLabel: UIButton!
     @IBOutlet var topbar: UIView!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    
     
     
     override func viewDidLoad() {
@@ -72,8 +72,9 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         captureSession?.startRunning()
         
         // Move the message label and top bar to the front
-        view.bringSubview(toFront: messageLabel)
+        view.bringSubview(toFront: buttonLabel)
         view.bringSubview(toFront: topbar)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,12 +82,14 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         // Dispose of any resources that can be recreated.
     }
     
+
+    
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            messageLabel.text = "No QR code is detected"
+            buttonLabel.setTitle("No QR code is detected", for: .normal)
             return
         }
         
@@ -99,7 +102,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                messageLabel.text = metadataObj.stringValue
+                buttonLabel.setTitle(metadataObj.stringValue, for: .normal)
             }
         }
     }
