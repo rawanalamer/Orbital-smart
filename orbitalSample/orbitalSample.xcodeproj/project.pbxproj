@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		BB30FB2E1EDF6F36009AF125 /* DirectoryResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30FB2D1EDF6F36009AF125 /* DirectoryResultsViewController.swift */; };
+		BB3AE74A1EFBFFB9005A918A /* CarparkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3AE7491EFBFFB9005A918A /* CarparkViewController.swift */; };
 		BBC697D71EFB82CA004D88DE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC697D61EFB82CA004D88DE /* LocationViewController.swift */; };
 		BBC9B00C1EE4980F00DCC082 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00B1EE4980F00DCC082 /* StoreViewController.swift */; };
 		BBC9B00E1EE49B9A00DCC082 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */; };
 		BBC9B0101EE49EBD00DCC082 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */; };
 		E02A14871EFBB8AC00883F12 /* QRScannerController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */; };
-		E02A3CB41EFAD88C00997AFB /* CarparkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A3CB31EFAD88C00997AFB /* CarparkViewController.swift */; };
 		E02ECF701EED973900DCF7AC /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */; };
 		E031BE9E1EF03CA70016393C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E031BE9D1EF03CA70016393C /* ThirdViewController.swift */; };
 		E0B07FCF1EEBCB2900366D20 /* StoreDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B07FCE1EEBCB2900366D20 /* StoreDetailsController.swift */; };
@@ -38,12 +38,12 @@
 
 /* Begin PBXFileReference section */
 		BB30FB2D1EDF6F36009AF125 /* DirectoryResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryResultsViewController.swift; sourceTree = "<group>"; };
+		BB3AE7491EFBFFB9005A918A /* CarparkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarparkViewController.swift; sourceTree = "<group>"; };
 		BBC697D61EFB82CA004D88DE /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		BBC9B00B1EE4980F00DCC082 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = ../HomeModel.swift; sourceTree = "<group>"; };
 		E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController2.swift; sourceTree = "<group>"; };
-		E02A3CB31EFAD88C00997AFB /* CarparkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarparkViewController.swift; sourceTree = "<group>"; };
 		E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		E031BE9D1EF03CA70016393C /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E0B07FCE1EEBCB2900366D20 /* StoreDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsController.swift; sourceTree = "<group>"; };
@@ -105,9 +105,7 @@
 				BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */,
 				E0B6EC151ED928C8005EBE9B /* AppDelegate.swift */,
 				E0B6EC171ED928C8005EBE9B /* FirstViewController.swift */,
-				E0B6EC191ED928C8005EBE9B /* SecondViewController.swift */,
 				E0B6EC1B1ED928C8005EBE9B /* Main.storyboard */,
-				BBC697D61EFB82CA004D88DE /* LocationViewController.swift */,
 				BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */,
 				E0B6EC1E1ED928C8005EBE9B /* Assets.xcassets */,
 				E0B6EC201ED928C8005EBE9B /* LaunchScreen.storyboard */,
@@ -115,10 +113,12 @@
 				BB30FB2D1EDF6F36009AF125 /* DirectoryResultsViewController.swift */,
 				BBC9B00B1EE4980F00DCC082 /* StoreViewController.swift */,
 				E0B07FCE1EEBCB2900366D20 /* StoreDetailsController.swift */,
+				E0B6EC191ED928C8005EBE9B /* SecondViewController.swift */,
 				E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */,
+				BBC697D61EFB82CA004D88DE /* LocationViewController.swift */,
 				E031BE9D1EF03CA70016393C /* ThirdViewController.swift */,
-				E02A3CB31EFAD88C00997AFB /* CarparkViewController.swift */,
 				E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */,
+				BB3AE7491EFBFFB9005A918A /* CarparkViewController.swift */,
 			);
 			path = orbitalSample;
 			sourceTree = "<group>";
@@ -251,9 +251,9 @@
 				BBC697D71EFB82CA004D88DE /* LocationViewController.swift in Sources */,
 				BB30FB2E1EDF6F36009AF125 /* DirectoryResultsViewController.swift in Sources */,
 				BBC9B0101EE49EBD00DCC082 /* HomeModel.swift in Sources */,
-				E02A3CB41EFAD88C00997AFB /* CarparkViewController.swift in Sources */,
 				BBC9B00E1EE49B9A00DCC082 /* StoreModel.swift in Sources */,
 				E02ECF701EED973900DCF7AC /* QRScannerController.swift in Sources */,
+				BB3AE74A1EFBFFB9005A918A /* CarparkViewController.swift in Sources */,
 				E02A14871EFBB8AC00883F12 /* QRScannerController2.swift in Sources */,
 				E0B07FCF1EEBCB2900366D20 /* StoreDetailsController.swift in Sources */,
 				E0B6EC161ED928C8005EBE9B /* AppDelegate.swift in Sources */,

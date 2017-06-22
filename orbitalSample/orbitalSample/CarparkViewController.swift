@@ -2,17 +2,17 @@
 //  CarparkViewController.swift
 //  orbitalSample
 //
-//  Created by Anusree on 22/6/17.
+//  Created by Rawan Alamer on 6/22/17.
 //  Copyright © 2017 orbitalstaff. All rights reserved.
 //
 
 import UIKit
 
 class CarparkViewController: UIViewController {
-    
+
+    @IBOutlet weak var carparkLabel: UILabel!
     var carparkId: String?
     
-    @IBOutlet weak var carparkLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +53,5 @@ class CarparkViewController: UIViewController {
         myAlert.addAction(okAction);
         self.present(myAlert, animated: true, completion: nil)
     }
-    
-    
+
 }

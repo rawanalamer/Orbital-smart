@@ -11,10 +11,9 @@ import AVFoundation
 
 class QRScannerController2: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
-    
-    
+
+    @IBOutlet weak var topBar: UIView!
     @IBOutlet weak var qrButton2: UIButton!
-    
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
