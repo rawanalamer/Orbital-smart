@@ -229,7 +229,7 @@
         <!--Carpark Navigation -->
         <scene sceneID="k4j-bz-TME">
             <objects>
-                <viewController title="Carpark Navigation " id="LUD-TN-k2z" customClass="ThirdViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Carpark Navigation " id="LUD-TN-k2z" customClass="ThirdViewController" customModule="orbitalSample" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kVw-tr-OhZ"/>
                         <viewControllerLayoutGuide type="bottom" id="7eo-G9-8KK"/>
@@ -242,7 +242,7 @@
                                 <rect key="frame" x="116" y="451" width="139" height="30"/>
                                 <state key="normal" title="Scan your code now"/>
                                 <connections>
-                                    <segue destination="TlL-RA-Dut" kind="presentation" id="Hdv-6r-RTB"/>
+                                    <segue destination="TlL-RA-Dut" kind="show" id="0t1-kq-sWN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code Scanner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-68-sY4">
@@ -634,16 +634,16 @@
                                     <constraint firstAttribute="bottom" secondItem="IGh-r1-TUC" secondAttribute="bottom" constant="8" id="zmb-3z-MYA"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNH-kc-kmA">
-                                <rect key="frame" x="0.0" y="635" width="375" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-HT-SbH">
+                                <rect key="frame" x="0.0" y="578" width="375" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="No QR code detected">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="qrButtonTouch:" destination="ujv-VV-Kji" eventType="touchUpInside" id="hzo-rA-gwH"/>
-                                    <segue destination="SZX-nc-8ha" kind="show" identifier="carparkSegue" id="CXz-m0-tc4"/>
+                                    <action selector="qrButtonTouch:" destination="ujv-VV-Kji" eventType="touchUpInside" id="pbI-wL-XVY"/>
+                                    <segue destination="SZX-nc-8ha" kind="show" identifier="carparkSegue" id="Z4h-By-eEj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -655,7 +655,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="qrButton" destination="gNH-kc-kmA" id="Svp-UI-QTu"/>
+                        <outlet property="qrbutton" destination="DJ8-HT-SbH" id="yDq-QE-2my"/>
                         <outlet property="topBar" destination="A72-3L-gNI" id="fWo-Qd-kpP"/>
                         <outlet property="topbar" destination="A72-3L-gNI" id="fyC-VE-mvN"/>
                     </connections>

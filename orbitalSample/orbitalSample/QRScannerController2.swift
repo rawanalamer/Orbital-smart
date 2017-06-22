@@ -12,9 +12,8 @@ import AVFoundation
 class QRScannerController2: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     
-    //@IBOutlet weak var confirmButton: UIButton!
-    @IBOutlet weak var qrButton: UIButton!
-    @IBOutlet var topBar: UIView!
+    
+    @IBOutlet weak var qrButton2: UIButton!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -73,8 +72,8 @@ class QRScannerController2: UIViewController, AVCaptureMetadataOutputObjectsDele
         captureSession?.startRunning()
         
         // Move the message label and top bar to the front
-        view.bringSubview(toFront: qrButton)
-        view.bringSubview(toFront: topBar)
+        view.bringSubview(toFront: qrButton2)
+        //view.bringSubview(toFront: topBar)
         
     }
     
@@ -90,7 +89,7 @@ class QRScannerController2: UIViewController, AVCaptureMetadataOutputObjectsDele
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            qrButton.setTitle("No QR code detected", for: .normal)
+            qrButton2.setTitle("No QR code detected", for: .normal)
             return
         }
         
@@ -103,7 +102,7 @@ class QRScannerController2: UIViewController, AVCaptureMetadataOutputObjectsDele
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                qrButton.setTitle("\(metadataObj.stringValue!)      Press to confirm", for: .normal)
+                qrButton2.setTitle("\(metadataObj.stringValue!)      Press to confirm", for: .normal)
             }
         }
     }
@@ -117,7 +116,7 @@ class QRScannerController2: UIViewController, AVCaptureMetadataOutputObjectsDele
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         
         let carparkVC  = segue.destination as! CarparkViewController
-        carparkVC.carparkId = qrButton.currentTitle!
+        carparkVC.carparkId = qrButton2.currentTitle!
         
     }
     
