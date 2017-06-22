@@ -12,8 +12,9 @@ import AVFoundation
 class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     
-    @IBOutlet weak var buttonLabel: UIButton!
+    @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet var topbar: UIView!
+    @IBOutlet weak var qrButton: UIButton!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -72,7 +73,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         captureSession?.startRunning()
         
         // Move the message label and top bar to the front
-        view.bringSubview(toFront: buttonLabel)
+        view.bringSubview(toFront: qrButton)
         view.bringSubview(toFront: topbar)
         
     }
@@ -89,7 +90,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            buttonLabel.setTitle("No QR code is detected", for: .normal)
+            qrButton.setTitle("No QR code detected", for: .normal)
             return
         }
         
@@ -102,11 +103,24 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                buttonLabel.setTitle(metadataObj.stringValue, for: .normal)
+                qrButton.setTitle("\(metadataObj.stringValue!)      Press to confirm", for: .normal)
             }
         }
     }
     
+    @IBAction func qrButtonTouch(_ sender: Any) {
+        self.performSegue(withIdentifier: "locationSegue", sender: self)
+        print("prepareForSegue works")
+
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
+        
+        let locationVC  = segue.destination as! LocationViewController
+        locationVC.locationId = qrButton.currentTitle!
+        
+    }
+
+
 }
 

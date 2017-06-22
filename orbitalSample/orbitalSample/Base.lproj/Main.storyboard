@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cW6-8c-eTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="402"/>
+            <point key="canvasLocation" x="2639.1999999999998" y="401.64917541229386"/>
         </scene>
         <!--Carpark Navigation -->
         <scene sceneID="k4j-bz-TME">
@@ -282,7 +282,7 @@
             </objects>
             <point key="canvasLocation" x="-10.4" y="878.41079460269873"/>
         </scene>
-        <!--Mall Navigation-->
+        <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
@@ -298,7 +298,7 @@
                                 <rect key="frame" x="117" y="429" width="139" height="30"/>
                                 <state key="normal" title="Scan your code now"/>
                                 <connections>
-                                    <segue destination="ujv-VV-Kji" kind="presentation" id="IsV-t8-gqB"/>
+                                    <segue destination="ujv-VV-Kji" kind="show" id="trm-oU-ULf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code Scanner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qo8-nW-oek">
@@ -332,11 +332,11 @@
                             <constraint firstItem="6ol-El-cFu" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="110.5" id="yPA-sh-5yU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mall Navigation" image="rsz_8850-200" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="0iV-5G-gaH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="1689" y="401"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -350,7 +350,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="7nt-nR-j6p" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="P68-3V-pgm" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="LUD-TN-k2z" kind="relationship" relationship="viewControllers" id="PRw-M4-ZdL"/>
                     </connections>
                 </tabBarController>
@@ -458,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9H-xK-qnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2472.8000000000002" y="340.47976011994007"/>
+            <point key="canvasLocation" x="3412" y="340.47976011994007"/>
         </scene>
         <!--Scanner Controller-->
         <scene sceneID="j2K-b0-GVC">
@@ -503,12 +503,16 @@
                                     <constraint firstAttribute="bottom" secondItem="YKN-mO-pSI" secondAttribute="bottom" constant="8" id="lRH-6Q-BoK"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-9v-fAV">
-                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuU-eC-TAJ">
+                                <rect key="frame" x="0.0" y="578" width="375" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="No QR Code is shown"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="No QR code detected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="bme-n7-9aK" kind="show" id="dbu-OQ-q5y"/>
+                                    <action selector="qrButtonTouch:" destination="ujv-VV-Kji" eventType="touchUpInside" id="d8S-yb-ciy"/>
+                                    <segue destination="DaB-rJ-YcE" kind="show" identifier="locationSegue" id="Joo-74-58F"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -519,30 +523,31 @@
                             <constraint firstItem="j6K-aG-5oz" firstAttribute="leading" secondItem="T2J-zm-bNN" secondAttribute="leading" id="iuB-IH-5lC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="o4P-Jc-K0q"/>
                     <connections>
-                        <outlet property="buttonLabel" destination="XY3-9v-fAV" id="pzu-PX-Z8S"/>
+                        <outlet property="qrButton" destination="HuU-eC-TAJ" id="Cyw-Fs-4Mo"/>
                         <outlet property="topbar" destination="j6K-aG-5oz" id="FLG-YN-1Yq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OH4-7U-mAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DTn-X0-ftN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="1193.2533733133434"/>
+            <point key="canvasLocation" x="1688.8" y="1193.2533733133434"/>
         </scene>
-        <!--Location View Controller-->
-        <scene sceneID="xnW-ti-ImN">
+        <!--LocationViewController-->
+        <scene sceneID="zke-x6-TPB">
             <objects>
-                <viewController id="bme-n7-9aK" customClass="LocationViewController" sceneMemberID="viewController">
+                <viewController title="LocationViewController" id="DaB-rJ-YcE" customClass="LocationViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gly-fP-DCl"/>
-                        <viewControllerLayoutGuide type="bottom" id="NQa-Ec-18d"/>
+                        <viewControllerLayoutGuide type="top" id="z4b-Lu-SAo"/>
+                        <viewControllerLayoutGuide type="bottom" id="GBE-Vg-wKi"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7Ah-Zj-0My">
+                    <view key="view" contentMode="scaleToFill" id="fdt-MH-XEt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtZ-nW-Wpt">
-                                <rect key="frame" x="116" y="194" width="142" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSt-bJ-RzQ">
+                                <rect key="frame" x="166" y="106" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -551,10 +556,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="ZSt-bJ-RzQ" id="B0h-uj-VAv"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h0o-ON-Y9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTG-Rg-HwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517.5999999999999" y="1192.3538230884558"/>
+            <point key="canvasLocation" x="2562.4000000000001" y="1193.2533733133434"/>
         </scene>
         <!--Carpark View Controller-->
         <scene sceneID="1CK-ba-Xl2">
@@ -650,6 +658,25 @@
                 <exit id="O4L-6V-ney" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-11" y="1764"/>
+        </scene>
+        <!--Mall Navigation-->
+        <scene sceneID="3UL-CO-AU4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P68-3V-pgm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mall Navigation" image="rsz_8850-200" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="60A-zv-Ouq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="XQE-Ml-y0T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IhR-a0-aCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
     </scenes>
     <resources>
