@@ -12,6 +12,7 @@
 		BBC9B00C1EE4980F00DCC082 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00B1EE4980F00DCC082 /* StoreViewController.swift */; };
 		BBC9B00E1EE49B9A00DCC082 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */; };
 		BBC9B0101EE49EBD00DCC082 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */; };
+		E02A14871EFBB8AC00883F12 /* QRScannerController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */; };
 		E02A3CB41EFAD88C00997AFB /* CarparkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A3CB31EFAD88C00997AFB /* CarparkViewController.swift */; };
 		E02ECF701EED973900DCF7AC /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */; };
 		E031BE9E1EF03CA70016393C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E031BE9D1EF03CA70016393C /* ThirdViewController.swift */; };
@@ -41,6 +42,7 @@
 		BBC9B00B1EE4980F00DCC082 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = ../HomeModel.swift; sourceTree = "<group>"; };
+		E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController2.swift; sourceTree = "<group>"; };
 		E02A3CB31EFAD88C00997AFB /* CarparkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarparkViewController.swift; sourceTree = "<group>"; };
 		E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		E031BE9D1EF03CA70016393C /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */,
 				E031BE9D1EF03CA70016393C /* ThirdViewController.swift */,
 				E02A3CB31EFAD88C00997AFB /* CarparkViewController.swift */,
+				E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */,
 			);
 			path = orbitalSample;
 			sourceTree = "<group>";
@@ -188,7 +191,7 @@
 				TargetAttributes = {
 					E0B6EC111ED928C8005EBE9B = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = L82V4A9654;
+						DevelopmentTeam = 3PP6NQDSH9;
 						ProvisioningStyle = Automatic;
 					};
 					E0B6EC271ED928C9005EBE9B = {
@@ -251,6 +254,7 @@
 				E02A3CB41EFAD88C00997AFB /* CarparkViewController.swift in Sources */,
 				BBC9B00E1EE49B9A00DCC082 /* StoreModel.swift in Sources */,
 				E02ECF701EED973900DCF7AC /* QRScannerController.swift in Sources */,
+				E02A14871EFBB8AC00883F12 /* QRScannerController2.swift in Sources */,
 				E0B07FCF1EEBCB2900366D20 /* StoreDetailsController.swift in Sources */,
 				E0B6EC161ED928C8005EBE9B /* AppDelegate.swift in Sources */,
 				E0B6EC181ED928C8005EBE9B /* FirstViewController.swift in Sources */,
@@ -392,11 +396,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L82V4A9654;
+				DEVELOPMENT_TEAM = 3PP6NQDSH9;
 				INFOPLIST_FILE = orbitalSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test1.orbitalSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test.orbitalSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -406,11 +410,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L82V4A9654;
+				DEVELOPMENT_TEAM = 3PP6NQDSH9;
 				INFOPLIST_FILE = orbitalSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test1.orbitalSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orbital2017test.orbitalSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

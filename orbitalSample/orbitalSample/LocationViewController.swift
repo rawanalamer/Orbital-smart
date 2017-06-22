@@ -19,7 +19,7 @@ class LocationViewController: UIViewController {
         if locationId !=  "No QR code detected"{
             if let dotRange = locationId?.range(of: " ") {
                 locationId?.removeSubrange(dotRange.lowerBound..<(locationId?.endIndex)!)
-                print(locationId)
+                print(locationId!)
             }
         }
         locationLabel.text = locationId!
@@ -29,7 +29,7 @@ class LocationViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        print(locationLabel.text)
+        print(locationLabel.text!)
         if locationId ==  "No QR code detected"{
             let errorMessage = ("QR code invalid")
             self.displayAlertMessage(userMessage: errorMessage)

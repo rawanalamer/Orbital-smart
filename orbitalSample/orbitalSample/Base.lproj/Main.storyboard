@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cW6-8c-eTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2639.1999999999998" y="401.64917541229386"/>
+            <point key="canvasLocation" x="3578.4000000000001" y="400.74962518740631"/>
         </scene>
         <!--Carpark Navigation -->
         <scene sceneID="k4j-bz-TME">
@@ -276,11 +276,11 @@
                             <constraint firstItem="CgT-68-sY4" firstAttribute="centerX" secondItem="9G6-jT-NPh" secondAttribute="centerX" id="zcJ-WJ-cEO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Carpark Navigation" image="rsz_car-xxl" id="FNf-1N-GXF"/>
+                    <navigationItem key="navigationItem" id="mLy-gh-1pC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3B-w7-5EN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.4" y="878.41079460269873"/>
+            <point key="canvasLocation" x="928.79999999999995" y="878.41079460269873"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -336,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1689" y="401"/>
+            <point key="canvasLocation" x="2628" y="400.74962518740631"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -351,7 +351,7 @@
                     <connections>
                         <segue destination="7nt-nR-j6p" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="P68-3V-pgm" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="LUD-TN-k2z" kind="relationship" relationship="viewControllers" id="PRw-M4-ZdL"/>
+                        <segue destination="5By-Fa-jaH" kind="relationship" relationship="viewControllers" id="PRw-M4-ZdL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -458,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9H-xK-qnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3412" y="340.47976011994007"/>
+            <point key="canvasLocation" x="4351.1999999999998" y="340.47976011994007"/>
         </scene>
         <!--Scanner Controller-->
         <scene sceneID="j2K-b0-GVC">
@@ -532,7 +532,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OH4-7U-mAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DTn-X0-ftN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="1193.2533733133434"/>
+            <point key="canvasLocation" x="2628" y="1193.2533733133434"/>
         </scene>
         <!--LocationViewController-->
         <scene sceneID="zke-x6-TPB">
@@ -562,7 +562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTG-Rg-HwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2562.4000000000001" y="1193.2533733133434"/>
+            <point key="canvasLocation" x="3501.5999999999999" y="1193.2533733133434"/>
         </scene>
         <!--Carpark View Controller-->
         <scene sceneID="1CK-ba-Xl2">
@@ -591,10 +591,10 @@
             </objects>
             <point key="canvasLocation" x="869.60000000000002" y="1936.2818590704649"/>
         </scene>
-        <!--Scanner Controller-->
+        <!--Scanner Controller2-->
         <scene sceneID="BfW-6r-MzI">
             <objects>
-                <viewController id="TlL-RA-Dut" customClass="QRScannerController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TlL-RA-Dut" customClass="QRScannerController2" customModule="orbitalSample" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Zm-LT-yuv"/>
                         <viewControllerLayoutGuide type="bottom" id="pu3-05-cdD"/>
@@ -634,12 +634,16 @@
                                     <constraint firstAttribute="bottom" secondItem="IGh-r1-TUC" secondAttribute="bottom" constant="8" id="zmb-3z-MYA"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJT-wd-A1l">
-                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNH-kc-kmA">
+                                <rect key="frame" x="0.0" y="635" width="375" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="No QR Code is shown"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="No QR code detected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="SZX-nc-8ha" kind="show" id="5rF-m3-VyP"/>
+                                    <action selector="qrButtonTouch:" destination="ujv-VV-Kji" eventType="touchUpInside" id="hzo-rA-gwH"/>
+                                    <segue destination="SZX-nc-8ha" kind="show" identifier="carparkSegue" id="CXz-m0-tc4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -651,6 +655,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="qrButton" destination="gNH-kc-kmA" id="Svp-UI-QTu"/>
+                        <outlet property="topBar" destination="A72-3L-gNI" id="fWo-Qd-kpP"/>
                         <outlet property="topbar" destination="A72-3L-gNI" id="fyC-VE-mvN"/>
                     </connections>
                 </viewController>
@@ -676,7 +682,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IhR-a0-aCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="1688.8" y="359.37031484257875"/>
+        </scene>
+        <!--Carpark Navigation-->
+        <scene sceneID="Z7i-Ck-hW7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5By-Fa-jaH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Carpark Navigation" image="rsz_car-xxl" id="FNf-1N-GXF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eH8-7a-4bH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LUD-TN-k2z" kind="relationship" relationship="rootViewController" id="f9n-Tp-Y65"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bov-NW-V6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.4" y="878.41079460269873"/>
         </scene>
     </scenes>
     <resources>
