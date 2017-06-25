@@ -72,12 +72,12 @@
                   moduleName = "orbitalSample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rrwan/Orbital-smart/orbitalSample/orbitalSample/DirectoryResultsViewController.swift"
-                  timestampString = "519831749.180633"
+                  timestampString = "520020729.4712"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "106"
                   endingLineNumber = "106"
-                  offsetFromSymbolStart = "6953">
+                  offsetFromSymbolStart = "5460">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -87,12 +87,12 @@
                   moduleName = "orbitalSample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rrwan/Orbital-smart/orbitalSample/orbitalSample/DirectoryResultsViewController.swift"
-                  timestampString = "519831749.185992"
+                  timestampString = "520020729.474649"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "106"
                   endingLineNumber = "106"
-                  offsetFromSymbolStart = "7260">
+                  offsetFromSymbolStart = "5688">
                </Location>
             </Locations>
          </BreakpointContent>
