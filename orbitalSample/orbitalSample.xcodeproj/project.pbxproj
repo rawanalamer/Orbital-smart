@@ -14,6 +14,8 @@
 		BBC9B00E1EE49B9A00DCC082 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */; };
 		BBC9B0101EE49EBD00DCC082 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */; };
 		E02A14871EFBB8AC00883F12 /* QRScannerController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */; };
+		E02A37831EFE972300EC5442 /* HomeModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A37821EFE972300EC5442 /* HomeModel2.swift */; };
+		E02A37851EFE97F400EC5442 /* CarparkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A37841EFE97F400EC5442 /* CarparkModel.swift */; };
 		E02ECF701EED973900DCF7AC /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */; };
 		E031BE9E1EF03CA70016393C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E031BE9D1EF03CA70016393C /* ThirdViewController.swift */; };
 		E0B07FCF1EEBCB2900366D20 /* StoreDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B07FCE1EEBCB2900366D20 /* StoreDetailsController.swift */; };
@@ -44,6 +46,8 @@
 		BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = ../HomeModel.swift; sourceTree = "<group>"; };
 		E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController2.swift; sourceTree = "<group>"; };
+		E02A37821EFE972300EC5442 /* HomeModel2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel2.swift; sourceTree = "<group>"; };
+		E02A37841EFE97F400EC5442 /* CarparkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarparkModel.swift; sourceTree = "<group>"; };
 		E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		E031BE9D1EF03CA70016393C /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E0B07FCE1EEBCB2900366D20 /* StoreDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				E031BE9D1EF03CA70016393C /* ThirdViewController.swift */,
 				E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */,
 				BB3AE7491EFBFFB9005A918A /* CarparkViewController.swift */,
+				E02A37821EFE972300EC5442 /* HomeModel2.swift */,
+				E02A37841EFE97F400EC5442 /* CarparkModel.swift */,
 			);
 			path = orbitalSample;
 			sourceTree = "<group>";
@@ -251,7 +257,9 @@
 				BBC697D71EFB82CA004D88DE /* LocationViewController.swift in Sources */,
 				BB30FB2E1EDF6F36009AF125 /* DirectoryResultsViewController.swift in Sources */,
 				BBC9B0101EE49EBD00DCC082 /* HomeModel.swift in Sources */,
+				E02A37851EFE97F400EC5442 /* CarparkModel.swift in Sources */,
 				BBC9B00E1EE49B9A00DCC082 /* StoreModel.swift in Sources */,
+				E02A37831EFE972300EC5442 /* HomeModel2.swift in Sources */,
 				E02ECF701EED973900DCF7AC /* QRScannerController.swift in Sources */,
 				BB3AE74A1EFBFFB9005A918A /* CarparkViewController.swift in Sources */,
 				E02A14871EFBB8AC00883F12 /* QRScannerController2.swift in Sources */,

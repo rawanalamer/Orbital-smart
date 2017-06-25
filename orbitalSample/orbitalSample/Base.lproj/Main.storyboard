@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -364,7 +364,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7nt-nR-j6p" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Directory" image="rsz_1directory" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AKd-vF-myL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AKd-vF-myL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -546,15 +546,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSt-bJ-RzQ">
-                                <rect key="frame" x="166" y="106" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSt-bJ-RzQ">
+                                <rect key="frame" x="166" y="161" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZSt-bJ-RzQ" firstAttribute="centerY" secondItem="fdt-MH-XEt" secondAttribute="centerY" constant="-162" id="JJ2-6L-ecg"/>
+                            <constraint firstItem="ZSt-bJ-RzQ" firstAttribute="centerX" secondItem="fdt-MH-XEt" secondAttribute="centerX" id="N7o-lH-NMg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="locationLabel" destination="ZSt-bJ-RzQ" id="B0h-uj-VAv"/>
@@ -649,15 +652,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No QR code detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqe-AU-zD4">
-                                <rect key="frame" x="83" y="151" width="209" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqe-AU-zD4">
+                                <rect key="frame" x="105" y="158" width="165.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cqe-AU-zD4" firstAttribute="centerY" secondItem="rWr-xJ-e0H" secondAttribute="centerY" constant="-165" id="hMK-Ql-mzv"/>
+                            <constraint firstItem="Cqe-AU-zD4" firstAttribute="centerX" secondItem="rWr-xJ-e0H" secondAttribute="centerX" id="jYl-g6-sbB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="carparkLabel" destination="Cqe-AU-zD4" id="Hvi-zu-Xp6"/>
@@ -673,7 +679,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P68-3V-pgm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mall Navigation" image="rsz_8850-200" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="60A-zv-Ouq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="60A-zv-Ouq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -692,7 +698,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5By-Fa-jaH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Carpark Navigation" image="rsz_car-xxl" id="FNf-1N-GXF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eH8-7a-4bH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eH8-7a-4bH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
