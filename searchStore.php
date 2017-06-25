@@ -4,6 +4,8 @@
 
     $returnValue = array();
 
+
+
     if(empty($_POST["name"])){
         $returnValue["message"]= "Missing required field";
 		echo json_encode($returnValue);
@@ -25,5 +27,3 @@
 
 
 ?>
-
-]
