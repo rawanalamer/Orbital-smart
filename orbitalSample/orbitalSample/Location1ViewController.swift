@@ -1,29 +1,27 @@
 //
-//  CarparkViewController.swift
+//  Location1ViewController.swift
 //  orbitalSample
 //
-//  Created by Rawan Alamer on 6/22/17.
+//  Created by Rawan Alamer on 6/24/17.
 //  Copyright © 2017 orbitalstaff. All rights reserved.
 //
 
 import UIKit
 
-class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, HomeModelProtocal {
+class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, HomeModelProtocal {
 
-    @IBOutlet weak var carparkLabel: UILabel!
-    @IBOutlet weak var locationImage: UIImageView!
-    @IBOutlet weak var selectLabel: UILabel!
-    @IBOutlet weak var picker: UIPickerView!
+    var locationId: String?
     var feedItems: NSArray = NSArray()
     var tapped: ((StoreModel) -> Void)?
     var selectedStore : StoreModel = StoreModel()
-    var carparkId: String?
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var diagram: UIImageView!
+    @IBOutlet weak var picker: UIPickerView!
     
     let locationURL = URL(string: "http://192.168.0.19:8888/searchLocation.php")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         self.picker.delegate = self
         self.picker.dataSource = self
@@ -32,33 +30,31 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         homeModel.delegate = self
         homeModel.downloadItems()
         
-        
         // Do any additional setup after loading the view.
     }
-    
     func itemsDownloaded(items: NSArray) {
         
         feedItems = items
         self.picker.reloadAllComponents()
     }
-    
     override func viewDidAppear(_ animated: Bool) {
-        
-        if carparkId !=  "No QR code detected"{
-            if let dotRange = carparkId?.range(of: " ") {
-                carparkId?.removeSubrange(dotRange.lowerBound..<(carparkId?.endIndex)!)
-                carparkLabel.text = "Your parked here:"
+        if locationId !=  "No QR code detected"{
+            if let dotRange = locationId?.range(of: " ") {
+                locationId?.removeSubrange(dotRange.lowerBound..<(locationId?.endIndex)!)
+                locationLabel.text = "Your current location:"
                 let imageUrl = "http://192.168.0.19:8080/Locations/location1.png"
-                get_image(imageUrl, locationImage)
+                get_image(imageUrl, diagram)
+                print(locationId!)
             }
         }
         else{
-            carparkLabel.text = carparkId!
+            locationLabel.text = locationId!
             let errorMessage = ("QR code invalid")
             self.displayAlertMessage(userMessage: errorMessage)
         }
+        
+        
     }
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int
     {
         return 1
@@ -79,18 +75,18 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     {
         selectedStore = feedItems[row] as! StoreModel
     }
-    
-    
+
+
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         print("prepareForSegue works")
         // Get reference to the destination view controller
-        let detailVC  = segue.destination as! CarparkDirectionViewController
+        let detailVC  = segue.destination as! DirectionViewController
         // Set the property to the selected location so when the view for
         // detail view controller loads, it can access that property to get the feeditem obj
         detailVC.selectedStore = selectedStore
         
     }
-    
+
     func get_image(_ url_str:String, _ imageView:UIImageView)
     {
         
@@ -129,16 +125,10 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         task.resume()
     }
-
     
-    
-    @IBAction func selectButtonTouch(_ sender: Any) {
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        self.performSegue(withIdentifier: "carparkDirectionSegue", sender: self)
-        print("performSegue works")
     }
     
     func displayAlertMessage(userMessage: String)
@@ -147,6 +137,12 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
         myAlert.addAction(okAction);
         self.present(myAlert, animated: true, completion: nil)
+    }
+    @IBAction func selectButtonTouch(_ sender: Any) {
+        // Set selected location to var
+        // Manually call segue to detail view controller
+        self.performSegue(withIdentifier: "directionSegue", sender: self)
+        print("performSegue works")
     }
 
 }

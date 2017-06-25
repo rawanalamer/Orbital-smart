@@ -10,6 +10,8 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
+    @IBOutlet weak var findButton: UIButton!
+    @IBOutlet weak var calculateButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,11 @@ class ThirdViewController: UIViewController {
     
     // MARK: - Navigation
     
+    
+    @IBAction func findButtonTouch(_ sender: Any) {
+    }
+    @IBAction func calculateButtonTouch(_ sender: Any) {
+    }
     @IBAction func unwindToHomeScreen(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
     }

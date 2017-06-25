@@ -59,54 +59,6 @@
             timestampString = "519668967.059584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "doSearch(searchWord:searchbar:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "orbitalSample.DirectoryResultsViewController.(doSearch (searchWord : Swift.String, searchbar : __ObjC.UISearchBar) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "orbitalSample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rrwan/Orbital-smart/orbitalSample/orbitalSample/DirectoryResultsViewController.swift"
-                  timestampString = "520020729.4712"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "5460">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "orbitalSample.DirectoryResultsViewController.(doSearch (searchWord : Swift.String, searchbar : __ObjC.UISearchBar) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "orbitalSample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rrwan/Orbital-smart/orbitalSample/orbitalSample/DirectoryResultsViewController.swift"
-                  timestampString = "520020729.474649"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "5688">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "orbitalSample/DirectoryResultsViewController.swift"
-            timestampString = "519668967.059584"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
             endingLineNumber = "64"
             landmarkName = "doSearch(searchWord:searchbar:)"

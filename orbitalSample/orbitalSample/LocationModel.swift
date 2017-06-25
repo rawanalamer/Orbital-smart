@@ -1,18 +1,17 @@
 //
-//  CarparkModel.swift
+//  LocationModel.swift
 //  orbitalSample
 //
-//  Created by Anusree on 24/6/17.
+//  Created by Rawan Alamer on 6/22/17.
 //  Copyright © 2017 orbitalstaff. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class CarparkModel: NSObject {
-    
+class LocationModel: NSObject {
     //properties
     
-    var zone1: String?
+    var locationId: String?
     var diagram: String?
     
     
@@ -25,10 +24,11 @@ class CarparkModel: NSObject {
     }
     
     
-    init(zone: String, diagram: String) {
+    init(locationId: String, diagram: String) {
         
-        self.zone1 = zone
+        self.locationId = locationId
         self.diagram = diagram
+
         
     }
     
@@ -36,8 +36,8 @@ class CarparkModel: NSObject {
     //prints object's current state
     
     override var description: String {
-        return "Zone: \(zone1), Diagram: \(diagram)"
+        return "Location Id: \(locationId!), Diagram: \(diagram!)"
         
     }
-    
+
 }

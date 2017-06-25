@@ -116,7 +116,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         
-        let locationVC  = segue.destination as! LocationViewController
+        let locationVC  = segue.destination as! Location1ViewController
         locationVC.locationId = qrButton.currentTitle!
         
     }
