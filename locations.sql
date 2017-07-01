@@ -1,5 +1,5 @@
 INSERT INTO locations (locationId, diagram)
-VALUES('1', 'http://192.168.0.19:8080/Stores/location1.png');
+VALUES('1', 'http://localhost:8080/Stores/location1.png');
 
 INSERT INTO locations (locationId, diagram)
 VALUES('2', 'http://localhost:8080/Stores/location2.png');
