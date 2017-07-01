@@ -1,6 +1,6 @@
 
 INSERT INTO carpark_directions (carparkId, storeId, diagram)
-VALUES('c1', '1', 'http://192.168.0.19:8080/carpark_directions/c1_toysAreUs');
+VALUES('c1', '1', 'http://localhost:8080/carpark_directions/c1_toysAreUs');
 INSERT INTO carpark_directions (carparkId, storeId, diagram)
 VALUES('c1', '2', 'http://localhost:8080/carpark_directions/c1_boostJuice');
 INSERT INTO carpark_directions (carparkId, storeId, diagram)
