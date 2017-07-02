@@ -314,6 +314,7 @@
                                 <state key="normal" title="Calculate parking fees"/>
                                 <connections>
                                     <action selector="calculateButtonTouch:" destination="LUD-TN-k2z" eventType="touchUpInside" id="mCQ-fs-tNL"/>
+                                    <segue destination="keC-mt-QYf" kind="show" id="Cof-ze-avg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg7-Hd-JOY">
@@ -350,6 +351,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3B-w7-5EN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1399.2" y="1100.5997001499252"/>
+        </scene>
+        <!--Calculate Parking Fees-->
+        <scene sceneID="zps-1F-sVK">
+            <objects>
+                <viewController id="keC-mt-QYf" customClass="CalculateParkingFees" customModule="orbitalSample" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xkb-e6-tXI"/>
+                        <viewControllerLayoutGuide type="bottom" id="oTq-tN-7Xi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7DD-uv-fQW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have parked your car for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxn-9W-Bgp">
+                                <rect key="frame" x="87" y="238" width="224" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZD8-P8-FAI">
+                                <rect key="frame" x="166" y="297" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="01V-TO-z9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="1505"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">

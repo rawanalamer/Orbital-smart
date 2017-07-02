@@ -19,6 +19,7 @@
 		BBC9B00C1EE4980F00DCC082 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00B1EE4980F00DCC082 /* StoreViewController.swift */; };
 		BBC9B00E1EE49B9A00DCC082 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */; };
 		BBC9B0101EE49EBD00DCC082 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */; };
+		E02974BA1F093F4E00972692 /* CalculateParkingFees.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02974B91F093F4E00972692 /* CalculateParkingFees.swift */; };
 		E02A14871EFBB8AC00883F12 /* QRScannerController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */; };
 		E02ECF701EED973900DCF7AC /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */; };
 		E031BE9E1EF03CA70016393C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E031BE9D1EF03CA70016393C /* ThirdViewController.swift */; };
@@ -55,6 +56,7 @@
 		BBC9B00B1EE4980F00DCC082 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = ../HomeModel.swift; sourceTree = "<group>"; };
+		E02974B91F093F4E00972692 /* CalculateParkingFees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateParkingFees.swift; sourceTree = "<group>"; };
 		E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController2.swift; sourceTree = "<group>"; };
 		E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		E031BE9D1EF03CA70016393C /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				BB19DBF61F000CD20065FBC0 /* HomeModel2.swift */,
 				E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */,
 				BB3AE7491EFBFFB9005A918A /* CarparkViewController.swift */,
+				E02974B91F093F4E00972692 /* CalculateParkingFees.swift */,
 			);
 			path = orbitalSample;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				BB19DBF91F000CD80065FBC0 /* CarparkModel.swift in Sources */,
 				E0B6EC1A1ED928C8005EBE9B /* SecondViewController.swift in Sources */,
+				E02974BA1F093F4E00972692 /* CalculateParkingFees.swift in Sources */,
 				BBC9B00C1EE4980F00DCC082 /* StoreViewController.swift in Sources */,
 				E031BE9E1EF03CA70016393C /* ThirdViewController.swift in Sources */,
 				BB19DBF31EFF68640065FBC0 /* CarparkDirectionViewController.swift in Sources */,
