@@ -62,6 +62,7 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
         print("name=\(searchWord)")
         
         let postString = "name=\(searchWord)"
+        
         request.httpBody = postString.data(using: String.Encoding.utf8)
         
         let task = URLSession.shared.dataTask(with: request, completionHandler:{ (data: Data?, response: URLResponse!, error: Error!) -> Void in
@@ -111,6 +112,7 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
         })
         
         task.resume()
+        
     }
     
     func displayAlertMessage(userMessage: String)
