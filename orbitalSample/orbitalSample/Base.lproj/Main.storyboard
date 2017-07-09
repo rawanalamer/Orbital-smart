@@ -286,13 +286,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BM-bo-9eA">
-                                <rect key="frame" x="116" y="451" width="139" height="30"/>
-                                <state key="normal" title="Scan your code now"/>
-                                <connections>
-                                    <segue destination="TlL-RA-Dut" kind="show" id="0t1-kq-sWN"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code Scanner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-68-sY4">
                                 <rect key="frame" x="119" y="99" width="137" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -308,8 +301,15 @@
                                     <constraint firstAttribute="height" constant="114" id="4F3-1z-DKa"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BM-bo-9eA">
+                                <rect key="frame" x="119" y="461" width="139" height="30"/>
+                                <state key="normal" title="Scan your code now"/>
+                                <connections>
+                                    <segue destination="TlL-RA-Dut" kind="show" id="0t1-kq-sWN"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7m-dd-A1Y">
-                                <rect key="frame" x="92" y="527" width="191" height="30"/>
+                                <rect key="frame" x="119" y="564" width="191" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate parking fees"/>
                                 <connections>
@@ -318,7 +318,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg7-Hd-JOY">
-                                <rect key="frame" x="116" y="489" width="139" height="30"/>
+                                <rect key="frame" x="143" y="526" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Find my car"/>
                                 <connections>
@@ -330,10 +330,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="JGN-T3-9Nz" secondAttribute="trailing" constant="32" id="0fb-Kj-hY7"/>
-                            <constraint firstItem="9BM-bo-9eA" firstAttribute="top" secondItem="JGN-T3-9Nz" secondAttribute="bottom" constant="11" id="3wY-bT-zOh"/>
+                            <constraint firstItem="9BM-bo-9eA" firstAttribute="top" secondItem="JGN-T3-9Nz" secondAttribute="bottom" constant="21" id="3wY-bT-zOh"/>
                             <constraint firstItem="JGN-T3-9Nz" firstAttribute="top" secondItem="CgT-68-sY4" secondAttribute="bottom" constant="28" id="H7B-64-pNs"/>
-                            <constraint firstItem="9BM-bo-9eA" firstAttribute="centerY" secondItem="9G6-jT-NPh" secondAttribute="centerY" constant="132.5" id="HZ3-2m-grr"/>
-                            <constraint firstItem="9BM-bo-9eA" firstAttribute="centerX" secondItem="9G6-jT-NPh" secondAttribute="centerX" constant="-2" id="OVH-DQ-aqM"/>
+                            <constraint firstItem="9BM-bo-9eA" firstAttribute="centerY" secondItem="9G6-jT-NPh" secondAttribute="centerY" constant="142.5" id="HZ3-2m-grr"/>
+                            <constraint firstItem="9BM-bo-9eA" firstAttribute="centerX" secondItem="9G6-jT-NPh" secondAttribute="centerX" constant="1" id="OVH-DQ-aqM"/>
                             <constraint firstItem="OWR-zo-HIX" firstAttribute="leading" secondItem="9G6-jT-NPh" secondAttribute="leadingMargin" constant="76" id="Okw-4z-wAv"/>
                             <constraint firstItem="CgT-68-sY4" firstAttribute="centerY" secondItem="9G6-jT-NPh" secondAttribute="centerY" constant="-224" id="h8d-2i-zCv"/>
                             <constraint firstItem="OWR-zo-HIX" firstAttribute="centerX" secondItem="CgT-68-sY4" secondAttribute="centerX" id="lCn-RE-kmh"/>
@@ -541,10 +541,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mk2-j0-9vj">
-                                <rect key="frame" x="30" y="400" width="315" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJS-3K-NkH">
                                 <rect key="frame" x="30" y="244" width="315" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -553,6 +549,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mk2-j0-9vj">
+                                <rect key="frame" x="44" y="400" width="315" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
