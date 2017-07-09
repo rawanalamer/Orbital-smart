@@ -116,7 +116,6 @@
 		E0B6EC141ED928C8005EBE9B /* orbitalSample */ = {
 			isa = PBXGroup;
 			children = (
-				BB19DBF21EFF68640065FBC0 /* CarparkDirectionViewController.swift */,
 				BB19DBF41EFF6F680065FBC0 /* CarViewController.swift */,
 				BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */,
 				E0B6EC151ED928C8005EBE9B /* AppDelegate.swift */,
@@ -136,6 +135,7 @@
 				BB3AE74F1EFED3E8005A918A /* Location1ViewController.swift */,
 				E031BE9D1EF03CA70016393C /* ThirdViewController.swift */,
 				BB19DBF81F000CD80065FBC0 /* CarparkModel.swift */,
+				BB19DBF21EFF68640065FBC0 /* CarparkDirectionViewController.swift */,
 				BB19DBF61F000CD20065FBC0 /* HomeModel2.swift */,
 				E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */,
 				BB3AE7491EFBFFB9005A918A /* CarparkViewController.swift */,
