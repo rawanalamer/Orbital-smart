@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class CarparkDirectionViewController: UIViewController {
 
@@ -17,13 +18,23 @@ class CarparkDirectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storeLabel.text = "Directions to Toys'r'Us"
-        let urlImage = "http://192.168.0.19:8080/carpark_directions/c1_toysAreUs.png"
+        storeLabel.text = "Directions to " + (self.selectedStore?.name)!
+        
+        let str = (self.selectedStore?.name)!
+        
+        print(str)
+        
+        let trimmedString = str.replacingOccurrences(of: " ", with: "")
+        
+        print(trimmedString)
+
+        let urlImage = "http://192.168.0.152:8080/carpark_directions/c1_" + trimmedString + ".png"
         get_image(urlImage, directionImage)
 
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

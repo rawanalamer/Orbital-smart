@@ -18,13 +18,24 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var tapped: ((StoreModel) -> Void)?
     var selectedStore : StoreModel = StoreModel()
     var carparkId: String?
+    var myCustomViewController: CarViewController = CarViewController(nibName: nil, bundle: nil)
+
     
-    let locationURL = URL(string: "http://192.168.0.19:8888/searchLocation.php")
+    
+    /*override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        myCustomViewController.codeScanned = true
+        print(myCustomViewController.codeScanned)
+
         self.picker.delegate = self
         self.picker.dataSource = self
         
@@ -32,9 +43,12 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         homeModel.delegate = self
         homeModel.downloadItems()
         
+        selectLabel.text = "Choose your destination"
+        
         
         // Do any additional setup after loading the view.
     }
+    
     
     func itemsDownloaded(items: NSArray) {
         
@@ -47,8 +61,8 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         if carparkId !=  "No QR code detected"{
             if let dotRange = carparkId?.range(of: " ") {
                 carparkId?.removeSubrange(dotRange.lowerBound..<(carparkId?.endIndex)!)
-                carparkLabel.text = "Your parked here:"
-                let imageUrl = "http://192.168.0.19:8080/Locations/location1.png"
+                carparkLabel.text = "You have parked here:"
+                let imageUrl = "http://192.168.0.152:8080/Locations/c1.png"
                 get_image(imageUrl, locationImage)
             }
         }
@@ -78,17 +92,22 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         selectedStore = feedItems[row] as! StoreModel
+        self.performSegue(withIdentifier: "carparkDirectionSegue", sender: self)
+        print("performSegue works")
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         print("prepareForSegue works")
+        
+            
         // Get reference to the destination view controller
         let detailVC  = segue.destination as! CarparkDirectionViewController
         // Set the property to the selected location so when the view for
         // detail view controller loads, it can access that property to get the feeditem obj
         detailVC.selectedStore = selectedStore
         
+
     }
     
     func get_image(_ url_str:String, _ imageView:UIImageView)

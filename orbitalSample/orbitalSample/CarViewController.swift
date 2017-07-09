@@ -13,10 +13,31 @@ class CarViewController: UIViewController {
     
     @IBOutlet weak var carLocation: UIImageView!
     @IBOutlet weak var carLabel: UILabel!
+    var codeScanned: Bool!
+    //var myCustomViewController: CarparkViewController = CarparkViewController(nibName: nil, bundle: nil)
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let errorMessage = ("You have not scanned a QR code to record your car's location!")
-        self.displayAlertMessage(userMessage: errorMessage)
+        //print(myCustomViewController.codeScanned)
+        //var getThatValue = myCustomViewController.codeScanned
+        
+        print(codeScanned)
+        if codeScanned != true{
+            let errorMessage = ("You have not scanned a QR code to record your car's location!")
+            self.displayAlertMessage(userMessage: errorMessage)
+        }
+        else{
+            let imageUrl = "http://192.168.0.152:8080/Locations/c1.png"
+            get_image(imageUrl, carLocation)
+        }
 
         
         // Do any additional setup after loading the view.
@@ -33,6 +54,45 @@ class CarViewController: UIViewController {
         let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
         myAlert.addAction(okAction);
         self.present(myAlert, animated: true, completion: nil)
+    }
+    
+    func get_image(_ url_str:String, _ imageView:UIImageView)
+    {
+        
+        let url:URL = URL(string: url_str)!
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (
+            data, response, error) in
+            
+            
+            if data != nil
+            {
+                let image = UIImage(data: data!)
+                
+                if(image != nil)
+                {
+                    
+                    DispatchQueue.main.async(execute: {
+                        
+                        imageView.image = image
+                        imageView.alpha = 0
+                        
+                        UIView.animate(withDuration: 2.5, animations: {
+                            imageView.alpha = 1.0
+                        })
+                        
+                    })
+                    
+                }
+                
+            }
+            
+            
+        })
+        
+        task.resume()
     }
 
     

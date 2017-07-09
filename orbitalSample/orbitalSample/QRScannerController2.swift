@@ -18,7 +18,6 @@ class QRScannerController2: UIViewController, AVCaptureMetadataOutputObjectsDele
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -107,8 +106,10 @@ class QRScannerController2: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
     
     @IBAction func qrButtonTouch(_ sender: Any) {
+        
         self.performSegue(withIdentifier: "carparkSegue", sender: self)
         print("prepareForSegue works")
+        
         
     }
     
@@ -116,8 +117,10 @@ class QRScannerController2: UIViewController, AVCaptureMetadataOutputObjectsDele
         
         let carparkVC  = segue.destination as! CarparkViewController
         carparkVC.carparkId = qrButton2.currentTitle!
+    
         
     }
+    
     
     
 }
