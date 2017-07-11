@@ -62,7 +62,7 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             if let dotRange = carparkId?.range(of: " ") {
                 carparkId?.removeSubrange(dotRange.lowerBound..<(carparkId?.endIndex)!)
                 carparkLabel.text = "You have parked here:"
-                let imageUrl = "http://192.168.0.152:8080/Locations/c1.png"
+                let imageUrl = "http://192.168.0.19:8080/Locations/c1.png"
                 get_image(imageUrl, locationImage)
             }
         }
@@ -98,14 +98,12 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
-        print("prepareForSegue works")
-        
-            
         // Get reference to the destination view controller
         let detailVC  = segue.destination as! CarparkDirectionViewController
         // Set the property to the selected location so when the view for
         // detail view controller loads, it can access that property to get the feeditem obj
         detailVC.selectedStore = selectedStore
+        print("prepareForSegue works")
         
 
     }
