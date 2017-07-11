@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Directory-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Directory" id="9pv-A4-QxB" customClass="FirstViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -129,12 +129,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2105" y="-984"/>
+            <point key="canvasLocation" x="1705" y="0.0"/>
         </scene>
-        <!--Directory Results View Controller-->
+        <!--Directory-->
         <scene sceneID="JgU-Nh-gsq">
             <objects>
-                <viewController id="Jzg-6e-osU" customClass="DirectoryResultsViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Directory" id="Jzg-6e-osU" customClass="DirectoryResultsViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hNo-Sv-Sub"/>
                         <viewControllerLayoutGuide type="bottom" id="5N2-9Q-wtR"/>
@@ -170,6 +170,10 @@
                                     <outlet property="delegate" destination="Jzg-6e-osU" id="6S5-4O-cpr"/>
                                 </connections>
                             </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0X-Ib-3Q5">
+                                <rect key="frame" x="16" y="20" width="132" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -179,12 +183,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXm-re-uGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3078" y="-984"/>
+            <point key="canvasLocation" x="2445.5999999999999" y="-0.44977511244377816"/>
         </scene>
-        <!--Store View Controller-->
+        <!--Directory-->
         <scene sceneID="VGv-mu-upb">
             <objects>
-                <viewController id="5jN-vv-zap" customClass="StoreViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Directory" id="5jN-vv-zap" customClass="StoreViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pEB-2h-bY4"/>
                         <viewControllerLayoutGuide type="bottom" id="pYI-FJ-VrN"/>
@@ -230,12 +234,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cW6-8c-eTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2105" y="-120"/>
+            <point key="canvasLocation" x="1705" y="770"/>
         </scene>
-        <!--Car View Controller-->
+        <!--Carpark Navigation-->
         <scene sceneID="RuJ-i6-yrk">
             <objects>
-                <viewController storyboardIdentifier="CarViewController" id="EgT-48-zhk" customClass="CarViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarViewController" title="Carpark Navigation" id="EgT-48-zhk" customClass="CarViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QSJ-H0-RIE"/>
                         <viewControllerLayoutGuide type="bottom" id="JnF-TK-TLl"/>
@@ -272,12 +276,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETI-IV-CBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2412" y="1179.7601199400301"/>
+            <point key="canvasLocation" x="-1783" y="2490"/>
         </scene>
-        <!--Carpark Navigation -->
+        <!--Carpark Navigation-->
         <scene sceneID="k4j-bz-TME">
             <objects>
-                <viewController title="Carpark Navigation " id="LUD-TN-k2z" customClass="ThirdViewController" customModule="orbitalSample" sceneMemberID="viewController">
+                <viewController title="Carpark Navigation" id="LUD-TN-k2z" customClass="ThirdViewController" customModule="orbitalSample" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kVw-tr-OhZ"/>
                         <viewControllerLayoutGuide type="bottom" id="7eo-G9-8KK"/>
@@ -349,12 +353,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3B-w7-5EN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1399.2" y="1100.5997001499252"/>
+            <point key="canvasLocation" x="-951" y="1600"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Mall Navigation-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Mall Navigation" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -405,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="1536"/>
+            <point key="canvasLocation" x="937" y="1600"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -444,12 +448,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4SV-T7-f1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="-983"/>
+            <point key="canvasLocation" x="937" y="0.0"/>
         </scene>
-        <!--Store Details Controller-->
+        <!--Directory-->
         <scene sceneID="958-vd-ZwX">
             <objects>
-                <viewController id="Xye-r5-lnS" customClass="StoreDetailsController" customModule="orbitalSample" sceneMemberID="viewController">
+                <viewController title="Directory" id="Xye-r5-lnS" customClass="StoreDetailsController" customModule="orbitalSample" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ofp-8l-Gkt"/>
                         <viewControllerLayoutGuide type="bottom" id="zyB-MV-Dac"/>
@@ -527,12 +531,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9H-xK-qnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3262" y="-120"/>
+            <point key="canvasLocation" x="2447" y="770"/>
         </scene>
-        <!--Scanner Controller-->
+        <!--Mall Navigation-->
         <scene sceneID="j2K-b0-GVC">
             <objects>
-                <viewController id="ujv-VV-Kji" customClass="QRScannerController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Mall Navigation" id="ujv-VV-Kji" customClass="QRScannerController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G5H-Vx-Yjn"/>
                         <viewControllerLayoutGuide type="bottom" id="Z7l-H2-YF8"/>
@@ -601,12 +605,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OH4-7U-mAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DTn-X0-ftN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="937" y="2363"/>
+            <point key="canvasLocation" x="1705" y="1600"/>
         </scene>
-        <!--Location1ViewController-->
+        <!--Mall Navigation-->
         <scene sceneID="IP6-eX-6j2">
             <objects>
-                <viewController storyboardIdentifier="Location1ViewController" title="Location1ViewController" id="zuI-eC-VOu" customClass="Location1ViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Mall Navigation" id="zuI-eC-VOu" customClass="Location1ViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bnw-jc-j6H"/>
                         <viewControllerLayoutGuide type="bottom" id="ppM-3e-jCy"/>
@@ -661,12 +665,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvy-lX-an6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709.5999999999999" y="2362.6686656671668"/>
+            <point key="canvasLocation" x="2446" y="1600"/>
         </scene>
-        <!--Direction View Controller-->
+        <!--Mall Navigation-->
         <scene sceneID="D23-50-rYJ">
             <objects>
-                <viewController storyboardIdentifier="DirectionViewController" id="eOl-uK-78s" customClass="DirectionViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DirectionViewController" title="Mall Navigation" id="eOl-uK-78s" customClass="DirectionViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J6O-kS-nOT"/>
                         <viewControllerLayoutGuide type="bottom" id="Hkc-Xz-iOU"/>
@@ -696,12 +700,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuh-ec-kEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2438" y="2363"/>
+            <point key="canvasLocation" x="2446" y="2490"/>
         </scene>
-        <!--Scanner Controller2-->
+        <!--Carpark Navigation-->
         <scene sceneID="BfW-6r-MzI">
             <objects>
-                <viewController id="TlL-RA-Dut" customClass="QRScannerController2" customModule="orbitalSample" sceneMemberID="viewController">
+                <viewController title="Carpark Navigation" id="TlL-RA-Dut" customClass="QRScannerController2" customModule="orbitalSample" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Zm-LT-yuv"/>
                         <viewControllerLayoutGuide type="bottom" id="pu3-05-cdD"/>
@@ -769,12 +773,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmr-2g-jgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="O4L-6V-ney" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1399" y="1930"/>
+            <point key="canvasLocation" x="-2" y="1600"/>
         </scene>
-        <!--Carpark View Controller-->
+        <!--Carpark Navigation-->
         <scene sceneID="Atl-sQ-uTL">
             <objects>
-                <viewController storyboardIdentifier="CarparkViewController" id="6PO-Z4-hzW" customClass="CarparkViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarparkViewController" title="Carpark Navigation" id="6PO-Z4-hzW" customClass="CarparkViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uMG-JF-2g8"/>
                         <viewControllerLayoutGuide type="bottom" id="3Se-9f-1Nj"/>
@@ -830,12 +834,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Mn-MA-4Gg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1399.2" y="2844.8275862068967"/>
+            <point key="canvasLocation" x="-1" y="2490"/>
         </scene>
-        <!--CarparkDirectionViewController-->
+        <!--Carpark Navigation-->
         <scene sceneID="KPm-Dp-XY9">
             <objects>
-                <viewController storyboardIdentifier="CarparkDirectionViewController" title="CarparkDirectionViewController" id="HFD-kX-Log" customClass="CarparkDirectionViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarparkDirectionViewController" title="Carpark Navigation" id="HFD-kX-Log" customClass="CarparkDirectionViewController" customModule="orbitalSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J7Q-aI-jhh"/>
                         <viewControllerLayoutGuide type="bottom" id="HXl-nj-BxP"/>
@@ -865,12 +869,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWM-7H-PHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-751.20000000000005" y="2844.8275862068967"/>
+            <point key="canvasLocation" x="937" y="2490"/>
         </scene>
         <!--Carpark Navigation-->
         <scene sceneID="Z7i-Ck-hW7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5By-Fa-jaH" sceneMemberID="viewController">
+                <navigationController title="Carpark Navigation" automaticallyAdjustsScrollViewInsets="NO" id="5By-Fa-jaH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Carpark Navigation" image="rsz_car-xxl" id="FNf-1N-GXF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eH8-7a-4bH">
@@ -884,7 +888,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bov-NW-V6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.4" y="878.41079460269873"/>
+            <point key="canvasLocation" x="-950" y="771"/>
         </scene>
         <!--Mall Navigation-->
         <scene sceneID="0Ql-jt-4aq">
@@ -903,7 +907,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Php-8h-KvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="772"/>
+            <point key="canvasLocation" x="937" y="770"/>
         </scene>
     </scenes>
     <resources>
