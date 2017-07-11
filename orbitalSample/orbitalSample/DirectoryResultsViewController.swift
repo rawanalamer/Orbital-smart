@@ -57,7 +57,9 @@ class DirectoryResultsViewController: UIViewController, UITableViewDataSource, U
         
         var request = URLRequest(url:myURL! as URL)
         request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        //request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         
         print("name=\(searchWord)")
         
