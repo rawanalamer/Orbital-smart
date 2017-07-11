@@ -11,18 +11,23 @@ import UIKit
 class DirectionViewController: UIViewController {
     
     var selectedStore : StoreModel?
+    var locationId : String?
     @IBOutlet weak var storeLabel: UILabel!
     @IBOutlet weak var directionImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storeLabel.text = "Directions to Toys'r'Us"
-        let urlImage = "http://192.168.0.19:8080/directions/location1-toys'r'us.png"
+        storeLabel.text = "Directions to " + (self.selectedStore?.name)!
+        
+        let str = (self.selectedStore?.name)!
+        let trimmedString = str.replacingOccurrences(of: " ", with: "")
+        let urlImage = "http://192.168.0.19:8080/directions/location\(locationId!)_" + trimmedString + ".png"
+        print(urlImage)
         get_image(urlImage, directionImage)
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -67,16 +72,5 @@ class DirectionViewController: UIViewController {
         task.resume()
     }
 
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

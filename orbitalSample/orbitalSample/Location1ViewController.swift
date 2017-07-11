@@ -11,6 +11,7 @@ import UIKit
 class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, HomeModelProtocal {
 
     var locationId: String?
+    var message: String?
     var feedItems: NSArray = NSArray()
     var tapped: ((StoreModel) -> Void)?
     var selectedStore : StoreModel = StoreModel()
@@ -18,7 +19,7 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var diagram: UIImageView!
     @IBOutlet weak var picker: UIPickerView!
     
-    let locationURL = URL(string: "http://192.168.0.19:8080/searchLocation.php")
+    let locationURL = URL(string: "http://192.168.0.19:8888/searchLocation.php")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,17 +39,17 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.picker.reloadAllComponents()
     }
     override func viewDidAppear(_ animated: Bool) {
-        if locationId !=  "No QR code detected"{
-            if let dotRange = locationId?.range(of: " ") {
-                locationId?.removeSubrange(dotRange.lowerBound..<(locationId?.endIndex)!)
-                locationLabel.text = "Your current location:"
-                let imageUrl = "http://192.168.0.19:8080/Locations/location1.png"
-                get_image(imageUrl, diagram)
-                print(locationId!)
-            }
+        
+        if message !=  "No QR code detected"{
+            
+            locationLabel.text = "Your current location:"
+            let imageUrl = "http://192.168.0.19:8080/Locations/location\(locationId!).png"
+            
+            get_image(imageUrl, diagram)
+            print(locationId!)
         }
         else{
-            locationLabel.text = locationId!
+            locationLabel.text = message!
             let errorMessage = ("QR code invalid")
             self.displayAlertMessage(userMessage: errorMessage)
         }
@@ -74,9 +75,11 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         selectedStore = feedItems[row] as! StoreModel
+        self.performSegue(withIdentifier: "directionSegue", sender: self)
+        print("performSegue works")
     }
-
-
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         print("prepareForSegue works")
         // Get reference to the destination view controller
@@ -84,9 +87,10 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Set the property to the selected location so when the view for
         // detail view controller loads, it can access that property to get the feeditem obj
         detailVC.selectedStore = selectedStore
+        detailVC.locationId = locationId
         
     }
-
+    
     func get_image(_ url_str:String, _ imageView:UIImageView)
     {
         

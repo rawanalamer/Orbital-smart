@@ -16,6 +16,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     @IBOutlet var topbar: UIView!
     @IBOutlet weak var qrButton: UIButton!
     
+    var locationId: String?
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
@@ -83,7 +84,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         
@@ -103,7 +104,9 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                qrButton.setTitle("\(metadataObj.stringValue!)      Press to confirm", for: .normal)
+                
+                locationId = metadataObj.stringValue!
+                qrButton.setTitle("Press to confirm", for: .normal)
             }
         }
     }
@@ -111,15 +114,17 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     @IBAction func qrButtonTouch(_ sender: Any) {
         self.performSegue(withIdentifier: "locationSegue", sender: self)
         print("prepareForSegue works")
-
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         
         let locationVC  = segue.destination as! Location1ViewController
-        locationVC.locationId = qrButton.currentTitle!
+        locationVC.locationId = locationId
+        locationVC.message = qrButton.currentTitle!
         
     }
+
 
 
 }
