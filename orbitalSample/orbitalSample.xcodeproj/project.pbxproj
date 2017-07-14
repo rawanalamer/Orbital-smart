@@ -19,6 +19,8 @@
 		BBC9B00C1EE4980F00DCC082 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00B1EE4980F00DCC082 /* StoreViewController.swift */; };
 		BBC9B00E1EE49B9A00DCC082 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */; };
 		BBC9B0101EE49EBD00DCC082 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */; };
+		BBD95D091F187A2F00D989C8 /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD95D081F187A2F00D989C8 /* QRCodeScannerViewController.swift */; };
+		BBD95D0B1F187CA900D989C8 /* SaveLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD95D0A1F187CA900D989C8 /* SaveLocationViewController.swift */; };
 		E02974BA1F093F4E00972692 /* CalculateParkingFees.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02974B91F093F4E00972692 /* CalculateParkingFees.swift */; };
 		E02A14871EFBB8AC00883F12 /* QRScannerController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */; };
 		E02ECF701EED973900DCF7AC /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */; };
@@ -56,6 +58,8 @@
 		BBC9B00B1EE4980F00DCC082 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = ../HomeModel.swift; sourceTree = "<group>"; };
+		BBD95D081F187A2F00D989C8 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
+		BBD95D0A1F187CA900D989C8 /* SaveLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveLocationViewController.swift; sourceTree = "<group>"; };
 		E02974B91F093F4E00972692 /* CalculateParkingFees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateParkingFees.swift; sourceTree = "<group>"; };
 		E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController2.swift; sourceTree = "<group>"; };
 		E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				E0B6EC151ED928C8005EBE9B /* AppDelegate.swift */,
 				E0B6EC171ED928C8005EBE9B /* FirstViewController.swift */,
 				E0B6EC1B1ED928C8005EBE9B /* Main.storyboard */,
+				BBD95D081F187A2F00D989C8 /* QRCodeScannerViewController.swift */,
+				BBD95D0A1F187CA900D989C8 /* SaveLocationViewController.swift */,
 				BB3AE7511EFEDBC1005A918A /* DirectionViewController.swift */,
 				BB3AE74B1EFC5BFE005A918A /* LocationModel.swift */,
 				BBC9B00D1EE49B9A00DCC082 /* StoreModel.swift */,
@@ -276,6 +282,7 @@
 				BBC9B0101EE49EBD00DCC082 /* HomeModel.swift in Sources */,
 				BBC9B00E1EE49B9A00DCC082 /* StoreModel.swift in Sources */,
 				E02ECF701EED973900DCF7AC /* QRScannerController.swift in Sources */,
+				BBD95D0B1F187CA900D989C8 /* SaveLocationViewController.swift in Sources */,
 				BB3AE7521EFEDBC1005A918A /* DirectionViewController.swift in Sources */,
 				BB3AE74A1EFBFFB9005A918A /* CarparkViewController.swift in Sources */,
 				E02A14871EFBB8AC00883F12 /* QRScannerController2.swift in Sources */,
@@ -283,6 +290,7 @@
 				E0B6EC161ED928C8005EBE9B /* AppDelegate.swift in Sources */,
 				BB19DBF51EFF6F680065FBC0 /* CarViewController.swift in Sources */,
 				BB3AE7501EFED3E8005A918A /* Location1ViewController.swift in Sources */,
+				BBD95D091F187A2F00D989C8 /* QRCodeScannerViewController.swift in Sources */,
 				BB3AE74C1EFC5BFE005A918A /* LocationModel.swift in Sources */,
 				E0B6EC181ED928C8005EBE9B /* FirstViewController.swift in Sources */,
 				BB19DBF71F000CD20065FBC0 /* HomeModel2.swift in Sources */,
