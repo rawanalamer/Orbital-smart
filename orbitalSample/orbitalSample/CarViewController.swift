@@ -30,18 +30,16 @@ class CarViewController: UIViewController {
         super.viewDidLoad()
         //print(myCustomViewController.codeScanned)
         //var getThatValue = myCustomViewController.codeScanned
-        print(SaveLocationViewController.sharedInstance.imageUrl)
-        print(codeScanned)
-        if codeScanned != true{
+        let url = carpark.getImageUrl()
+        print(url)
+        //print(codeScanned)
+        if url == nil{
             let errorMessage = ("You have not scanned a QR code to record your car's location!")
             self.displayAlertMessage(userMessage: errorMessage)
         }
         else{
-            print(SaveLocationViewController.sharedInstance.imageUrl)
-            
-            let imageUrl = SaveLocationViewController.sharedInstance.imageUrl
-            
-            get_image(imageUrl!, carLocation)
+            let imageUrl = url!
+            get_image(imageUrl, carLocation)
         }
 
         
