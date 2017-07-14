@@ -15,6 +15,9 @@ class SaveLocationViewController: UIViewController {
     @IBOutlet weak var time: UILabel!
     
     var carparkId: String?
+    var imageUrl: String?
+    static let sharedInstance = SaveLocationViewController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +36,14 @@ class SaveLocationViewController: UIViewController {
             if let dotRange = carparkId?.range(of: " ") {
                 carparkId?.removeSubrange(dotRange.lowerBound..<(carparkId?.endIndex)!)
                 currentLabel.text = "You have parked here:"
-                let imageUrl = "http://192.168.0.19:8080/Locations/c1.png"
-                get_image(imageUrl, image)
+                imageUrl = "http://192.168.0.19:8080/Locations/c1.png"
+                get_image(imageUrl!, image)
                 
                 let date = NSDate()
                 var formatter = DateFormatter();
                 formatter.dateFormat = "hh:mm";
                 let defaultTimeZoneStr = formatter.string(from: date as Date);
-                time.text = defaultTimeZoneStr
+                time.text = "Time parked: " + defaultTimeZoneStr
                 
             }
         }

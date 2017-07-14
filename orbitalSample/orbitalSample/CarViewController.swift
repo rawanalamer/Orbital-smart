@@ -14,6 +14,8 @@ class CarViewController: UIViewController {
     @IBOutlet weak var carLocation: UIImageView!
     @IBOutlet weak var carLabel: UILabel!
     var codeScanned: Bool!
+    var carpark: SaveLocationViewController = SaveLocationViewController(nibName: nil, bundle: nil)
+
     //var myCustomViewController: CarparkViewController = CarparkViewController(nibName: nil, bundle: nil)
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -28,15 +30,18 @@ class CarViewController: UIViewController {
         super.viewDidLoad()
         //print(myCustomViewController.codeScanned)
         //var getThatValue = myCustomViewController.codeScanned
-        
+        print(SaveLocationViewController.sharedInstance.imageUrl)
         print(codeScanned)
         if codeScanned != true{
             let errorMessage = ("You have not scanned a QR code to record your car's location!")
             self.displayAlertMessage(userMessage: errorMessage)
         }
         else{
-            let imageUrl = "http://192.168.0.152:8080/Locations/c1.png"
-            get_image(imageUrl, carLocation)
+            print(SaveLocationViewController.sharedInstance.imageUrl)
+            
+            let imageUrl = SaveLocationViewController.sharedInstance.imageUrl
+            
+            get_image(imageUrl!, carLocation)
         }
 
         

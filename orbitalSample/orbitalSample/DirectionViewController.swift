@@ -12,10 +12,13 @@ class DirectionViewController: UIViewController {
     
     var selectedStore : StoreModel?
     var locationId : String?
+    
     @IBOutlet weak var storeLabel: UILabel!
     @IBOutlet weak var directionImage: UIImageView!
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         storeLabel.text = "Directions to " + (self.selectedStore?.name)!
         
