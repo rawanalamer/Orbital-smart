@@ -38,4 +38,10 @@ CREATE TABLE carpark_directions(
 	diagram VARCHAR(128)
 );
 
+CREATE TABLE directions_to_carpark(
+    locationId VARCHAR(64) REFERENCES locations(locationId) ON DELETE CASCADE,
+	carparkId VARCHAR(64) REFERENCES carparks(carparkId) ON DELETE CASCADE,
+	diagram VARCHAR(128)
+);
+
 
