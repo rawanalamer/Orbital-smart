@@ -44,6 +44,7 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             
             locationLabel.text = "Your current location:"
             let imageUrl = "http://192.168.0.19:8080/Locations/location\(locationId!).png"
+            print(imageUrl)
             
             get_image(imageUrl, diagram)
             print(locationId!)

@@ -14,6 +14,7 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
+    var carparkId: String?
     
     @IBOutlet weak var qrButton2: UIButton!
     @IBOutlet weak var topBar2: UIView!
@@ -101,22 +102,24 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                qrButton2.setTitle("\(metadataObj.stringValue!)      Press to confirm", for: .normal)
+                carparkId = metadataObj.stringValue!
+                qrButton2.setTitle("Press to confirm", for: .normal)
             }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?){
         
-        let carparkVC  = segue.destination as! SaveLocationViewController
-        carparkVC.carparkId = qrButton2.currentTitle!
+        let carparkVC  = segue.destination as! SaveLocation1ViewController
+        carparkVC.message = qrButton2.currentTitle!
+        carparkVC.carparkId = carparkId
         
         
     }
     
     @IBAction func qrButtonTouch(_ sender: Any) {
         self.performSegue(withIdentifier: "saveLocation", sender: self)
-        print("prepareForSegue works")
+
     }
 
 

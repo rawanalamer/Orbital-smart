@@ -8,16 +8,17 @@
 
 import UIKit
 
-class SaveLocationViewController: UIViewController {
+class SaveLocation1ViewController: UIViewController {
     
     @IBOutlet weak var currentLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var time: UILabel!
     
+    var message: String?
     var carparkId: String?
     static var imageUrl: String?
-
-
+    static var id: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,21 +32,20 @@ class SaveLocationViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        if carparkId !=  "No QR code detected"{
-            if let dotRange = carparkId?.range(of: " ") {
-                carparkId?.removeSubrange(dotRange.lowerBound..<(carparkId?.endIndex)!)
-                currentLabel.text = "You have parked here:"
-                SaveLocationViewController.imageUrl = "http://192.168.0.19:8080/Locations/c1.png"
-                get_image(SaveLocationViewController.imageUrl!, image)
-                
-                let date = NSDate()
-                var formatter = DateFormatter();
-                formatter.dateFormat = "hh:mm";
-                let defaultTimeZoneStr = formatter.string(from: date as Date);
-                time.text = "Time parked: " + defaultTimeZoneStr
-                
-            }
+
+        if message! !=  "No QR code detected"{
+            currentLabel.text = "You have parked here:"
+            SaveLocation1ViewController.imageUrl = "http://192.168.0.19:8080/Locations/\(carparkId!).png"
+            SaveLocation1ViewController.id = carparkId
+            get_image(SaveLocation1ViewController.imageUrl!, image)
+            
+            let date = NSDate()
+            var formatter = DateFormatter();
+            formatter.dateFormat = "hh:mm";
+            let defaultTimeZoneStr = formatter.string(from: date as Date);
+            time.text = "Time parked: " + defaultTimeZoneStr
+            
+            
         }
         else{
             currentLabel.text = carparkId!
@@ -105,9 +105,11 @@ class SaveLocationViewController: UIViewController {
     }
     
     func getImageUrl()  -> String?{
-        return SaveLocationViewController.imageUrl
+        return SaveLocation1ViewController.imageUrl
     }
-    
+    func getId()  -> String?{
+        return SaveLocation1ViewController.id
+    }
 }
 
 

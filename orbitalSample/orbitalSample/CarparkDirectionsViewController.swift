@@ -1,60 +1,43 @@
 //
-//  CarViewController.swift
+//  CarparkDirectionsViewController.swift
 //  orbitalSample
 //
-//  Created by Rawan Alamer on 6/25/17.
+//  Created by Rawan Alamer on 7/15/17.
 //  Copyright © 2017 orbitalstaff. All rights reserved.
 //
 
 import UIKit
 
-class CarViewController: UIViewController {
+class CarparkDirectionsViewController: UIViewController {
 
-    
-    @IBOutlet weak var directionButton: UIButton!
-    @IBOutlet weak var carLocation: UIImageView!
-    @IBOutlet weak var carLabel: UILabel!
-    var codeScanned: Bool!
+    @IBOutlet weak var currentLable: UILabel!
+    @IBOutlet weak var directionsImage: UIImageView!
+    var locationId: String?
+    var message: String?
     var carpark: SaveLocation1ViewController = SaveLocation1ViewController(nibName: nil, bundle: nil)
-
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = carpark.getImageUrl()
-        directionButton.titleLabel?.textAlignment = NSTextAlignment.center
-        if url == nil{
-            let errorMessage = ("You have not scanned a QR code to record your car's location!")
-            self.displayAlertMessage(userMessage: errorMessage)
+        currentLable.lineBreakMode = NSLineBreakMode.byWordWrapping
+        currentLable.numberOfLines = 0
+        if message! !=  "No QR code detected"{
+            
+            currentLable.text = "Directions to your car from your current location:"
+            let carLocation = carpark.getId()
+            let imageUrl = "http://192.168.0.19:8080/directions_to_carprk/location\(locationId!)_\(carLocation!).png"
+            get_image(imageUrl, directionsImage)
         }
         else{
-            let imageUrl = url!
-            get_image(imageUrl, carLocation)
+            currentLable.text = message!
+            let errorMessage = ("QR code invalid")
+            self.displayAlertMessage(userMessage: errorMessage)
         }
-
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func displayAlertMessage(userMessage: String)
-    {
-        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
-        let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
-        myAlert.addAction(okAction);
-        self.present(myAlert, animated: true, completion: nil)
-    }
-    
     func get_image(_ url_str:String, _ imageView:UIImageView)
     {
         
@@ -93,8 +76,14 @@ class CarViewController: UIViewController {
         
         task.resume()
     }
-
     
+    func displayAlertMessage(userMessage: String)
+    {
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
+        let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(okAction);
+        self.present(myAlert, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
