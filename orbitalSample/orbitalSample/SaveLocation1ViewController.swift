@@ -18,6 +18,7 @@ class SaveLocation1ViewController: UIViewController {
     var carparkId: String?
     static var imageUrl: String?
     static var id: String?
+    static var time: NSDate!
     
     
     override func viewDidLoad() {
@@ -35,15 +36,23 @@ class SaveLocation1ViewController: UIViewController {
 
         if message! !=  "No QR code detected"{
             currentLabel.text = "You have parked here:"
+<<<<<<< HEAD
             SaveLocation1ViewController.imageUrl = "http://192.168.0.19:8080/Locations/location\(carparkId!).png"
+=======
+            SaveLocation1ViewController.imageUrl = "http://192.168.0.152:8080/Locations/location\(carparkId!).png"
+>>>>>>> 1c25b67413e948d2c5596b53a1cf65fa6b6f0b9e
             SaveLocation1ViewController.id = carparkId
             get_image(SaveLocation1ViewController.imageUrl!, image)
             
             let date = NSDate()
+            SaveLocation1ViewController.time = date
             var formatter = DateFormatter();
             formatter.dateFormat = "hh:mm";
             let defaultTimeZoneStr = formatter.string(from: date as Date);
             time.text = "Time parked: " + defaultTimeZoneStr
+            
+        
+           
             
             
         }
@@ -109,6 +118,10 @@ class SaveLocation1ViewController: UIViewController {
     }
     func getId()  -> String?{
         return SaveLocation1ViewController.id
+    }
+    
+    func getTime()  -> NSDate!{
+        return SaveLocation1ViewController.time
     }
 }
 
