@@ -8,10 +8,13 @@
 
 import UIKit
 
-class CarparkDirectionsViewController: UIViewController {
+class CarparkDirectionsViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var currentLable: UILabel!
     @IBOutlet weak var directionsImage: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
     var locationId: String?
     var message: String?
     var carpark: SaveLocation1ViewController = SaveLocation1ViewController(nibName: nil, bundle: nil)
@@ -20,6 +23,8 @@ class CarparkDirectionsViewController: UIViewController {
         super.viewDidLoad()
         currentLable.lineBreakMode = NSLineBreakMode.byWordWrapping
         currentLable.numberOfLines = 0
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 6.0
         if message! !=  "No QR code detected"{
             
             currentLable.text = "Directions to your car from your current location:"
@@ -85,14 +90,8 @@ class CarparkDirectionsViewController: UIViewController {
         self.present(myAlert, animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        directionsImage
     }
-    */
 
 }

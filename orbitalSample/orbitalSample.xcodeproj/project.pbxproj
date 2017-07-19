@@ -61,7 +61,7 @@
 		BBC9B00F1EE49EBD00DCC082 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = ../HomeModel.swift; sourceTree = "<group>"; };
 		BBD95D081F187A2F00D989C8 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
 		BBD95D0A1F187CA900D989C8 /* SaveLocation1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveLocation1ViewController.swift; sourceTree = "<group>"; };
-		BBD95D0C1F19E50F00D989C8 /* CarparkDirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarparkDirectionsViewController.swift; path = orbitalSample/CarparkDirectionsViewController.swift; sourceTree = "<group>"; };
+		BBD95D0C1F19E50F00D989C8 /* CarparkDirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarparkDirectionsViewController.swift; sourceTree = "<group>"; };
 		E02974B91F093F4E00972692 /* CalculateParkingFees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateParkingFees.swift; sourceTree = "<group>"; };
 		E02A14861EFBB8AC00883F12 /* QRScannerController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController2.swift; sourceTree = "<group>"; };
 		E02ECF6F1EED973900DCF7AC /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
@@ -103,7 +103,6 @@
 		E0B6EC091ED928C8005EBE9B = {
 			isa = PBXGroup;
 			children = (
-				BBD95D0C1F19E50F00D989C8 /* CarparkDirectionsViewController.swift */,
 				E0B6EC141ED928C8005EBE9B /* orbitalSample */,
 				E0B6EC2B1ED928C9005EBE9B /* orbitalSampleTests */,
 				E0B6EC361ED928C9005EBE9B /* orbitalSampleUITests */,
@@ -128,6 +127,7 @@
 				E0B6EC151ED928C8005EBE9B /* AppDelegate.swift */,
 				E0B6EC171ED928C8005EBE9B /* FirstViewController.swift */,
 				E0B6EC1B1ED928C8005EBE9B /* Main.storyboard */,
+				BBD95D0C1F19E50F00D989C8 /* CarparkDirectionsViewController.swift */,
 				BBD95D081F187A2F00D989C8 /* QRCodeScannerViewController.swift */,
 				BBD95D0A1F187CA900D989C8 /* SaveLocation1ViewController.swift */,
 				BB3AE7511EFEDBC1005A918A /* DirectionViewController.swift */,

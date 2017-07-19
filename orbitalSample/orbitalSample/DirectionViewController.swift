@@ -8,13 +8,14 @@
 
 import UIKit
 
-class DirectionViewController: UIViewController {
+class DirectionViewController: UIViewController, UIScrollViewDelegate {
     
     var selectedStore : StoreModel?
     var locationId : String?
     
     @IBOutlet weak var storeLabel: UILabel!
     @IBOutlet weak var directionImage: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         
@@ -27,6 +28,9 @@ class DirectionViewController: UIViewController {
         let urlImage = "http://192.168.0.19:8080/directions/location\(locationId!)_" + trimmedString + ".png"
         print(urlImage)
         get_image(urlImage, directionImage)
+        
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 6.0
         
         // Do any additional setup after loading the view.
     }
@@ -73,6 +77,10 @@ class DirectionViewController: UIViewController {
         })
         
         task.resume()
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return directionImage
     }
 
 

@@ -8,18 +8,24 @@
 
 import UIKit
 
-class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, HomeModelProtocal {
+class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, HomeModelProtocal, UIScrollViewDelegate {
 
     var locationId: String?
     var message: String?
     var feedItems: NSArray = NSArray()
     var tapped: ((StoreModel) -> Void)?
     var selectedStore : StoreModel = StoreModel()
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var diagram: UIImageView!
     @IBOutlet weak var picker: UIPickerView!
     
+    
+    
     let locationURL = URL(string: "http://192.168.0.19:8888/searchLocation.php")
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +36,9 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let homeModel = HomeModel()
         homeModel.delegate = self
         homeModel.downloadItems()
+        
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 6.0
         
         // Do any additional setup after loading the view.
     }
@@ -148,6 +157,10 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Manually call segue to detail view controller
         self.performSegue(withIdentifier: "directionSegue", sender: self)
         print("performSegue works")
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return diagram
     }
 
 }

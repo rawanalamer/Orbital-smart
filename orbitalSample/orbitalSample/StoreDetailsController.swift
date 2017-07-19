@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class StoreDetailsController: UIViewController {
+class StoreDetailsController: UIViewController, UIScrollViewDelegate {
     
     var selectedStore : StoreModel?
     @IBOutlet weak var resultLabel: UILabel!
@@ -19,31 +19,34 @@ class StoreDetailsController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var descrpTextView: UITextView!
     @IBOutlet weak var diagramImage: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
     var lastScaleFactor: CGFloat!
     var factor: CGFloat!
     var pinchGesture = UIPinchGestureRecognizer()
     
-    @IBAction func pinchRecognised(sender:UIPinchGestureRecognizer) {
-        print("pinch recognised")
-        lastScaleFactor = 1
-        factor = sender.scale
-        
-        if (factor>1){
-            diagramImage.transform = CGAffineTransform(scaleX: lastScaleFactor * (factor-1), y: lastScaleFactor * (factor-1))
-        }
-        else{
-            diagramImage.transform = CGAffineTransform(scaleX: lastScaleFactor * (factor), y: lastScaleFactor * (factor))
-        }
-        if(sender.state == UIGestureRecognizerState.ended)
-        {
-            if (factor>1){
-                lastScaleFactor = lastScaleFactor + factor - 1
-            }
-            else{
-                lastScaleFactor = lastScaleFactor * factor
-            }
-        }
-    }
+//    @IBAction func pinchRecognised(sender:UIPinchGestureRecognizer) {
+//        print("pinch recognised")
+//        lastScaleFactor = 1
+//        factor = sender.scale
+//        
+//        if (factor>1){
+//            diagramImage.transform = CGAffineTransform(scaleX: lastScaleFactor * (factor-1), y: lastScaleFactor * (factor-1))
+//        }
+//        else{
+//            diagramImage.transform = CGAffineTransform(scaleX: lastScaleFactor * (factor), y: lastScaleFactor * (factor))
+//        }
+//        if(sender.state == UIGestureRecognizerState.ended)
+//        {
+//            if (factor>1){
+//                lastScaleFactor = lastScaleFactor + factor - 1
+//            }
+//            else{
+//                lastScaleFactor = lastScaleFactor * factor
+//            }
+//        }
+//    }
     
     
     override func viewDidLoad() {
@@ -58,9 +61,16 @@ class StoreDetailsController: UIViewController {
         
         diagramImage.isUserInteractionEnabled = true
         let imageURL = self.selectedStore?.diagram
+        print(imageURL)
         get_image(imageURL!, diagramImage)
         
-        self.pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(StoreDetailsController.pinchRecognised(sender:)))
+        
+        
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 6.0
+        
+        
+       // self.pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(StoreDetailsController.pinchRecognised(sender:)))
 
         
     }
@@ -110,16 +120,10 @@ class StoreDetailsController: UIViewController {
         task.resume()
     }
     
-
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.diagramImage
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
     
 }
