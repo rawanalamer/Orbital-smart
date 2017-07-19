@@ -19,6 +19,31 @@ class StoreDetailsController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var descrpTextView: UITextView!
     @IBOutlet weak var diagramImage: UIImageView!
+    var lastScaleFactor: CGFloat!
+    var factor: CGFloat!
+    var pinchGesture = UIPinchGestureRecognizer()
+    
+    @IBAction func pinchRecognised(sender:UIPinchGestureRecognizer) {
+        print("pinch recognised")
+        lastScaleFactor = 1
+        factor = sender.scale
+        
+        if (factor>1){
+            diagramImage.transform = CGAffineTransform(scaleX: lastScaleFactor * (factor-1), y: lastScaleFactor * (factor-1))
+        }
+        else{
+            diagramImage.transform = CGAffineTransform(scaleX: lastScaleFactor * (factor), y: lastScaleFactor * (factor))
+        }
+        if(sender.state == UIGestureRecognizerState.ended)
+        {
+            if (factor>1){
+                lastScaleFactor = lastScaleFactor + factor - 1
+            }
+            else{
+                lastScaleFactor = lastScaleFactor * factor
+            }
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -30,9 +55,13 @@ class StoreDetailsController: UIViewController {
         websiteLabel.text = "Website: " + (self.selectedStore?.website)!
         numberLabel.text = "Number: " + (self.selectedStore?.number)!
         descrpTextView.text = "About Us: " + (self.selectedStore?.descrp)!
-
+        
+        diagramImage.isUserInteractionEnabled = true
         let imageURL = self.selectedStore?.diagram
         get_image(imageURL!, diagramImage)
+        
+        self.pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(StoreDetailsController.pinchRecognised(sender:)))
+
         
     }
     
