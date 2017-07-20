@@ -12,10 +12,8 @@ class CarViewController: UIViewController, UIScrollViewDelegate {
 
     
     @IBOutlet weak var directionButton: UIButton!
-    @IBOutlet weak var carLocation: UIImageView!
     @IBOutlet weak var carLabel: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
-    
+    @IBOutlet weak var carLocation: UIImageView!
     
     var codeScanned: Bool!
     var carpark: SaveLocation1ViewController = SaveLocation1ViewController(nibName: nil, bundle: nil)
@@ -39,8 +37,7 @@ class CarViewController: UIViewController, UIScrollViewDelegate {
         else{
             let imageUrl = url!
             get_image(imageUrl, carLocation)
-            self.scrollView.minimumZoomScale = 1.0
-            self.scrollView.maximumZoomScale = 6.0
+          
         }
 
         
@@ -99,8 +96,5 @@ class CarViewController: UIViewController, UIScrollViewDelegate {
         task.resume()
     }
 
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return carLocation
-    }
 
 }

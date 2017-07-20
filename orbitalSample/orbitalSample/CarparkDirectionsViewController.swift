@@ -29,7 +29,7 @@ class CarparkDirectionsViewController: UIViewController, UIScrollViewDelegate {
             
             currentLable.text = "Directions to your car from your current location:"
             let carLocation = carpark.getId()
-            let imageUrl = "http://192.168.0.19:8080/directions_to_carprk/location\(locationId!)_\(carLocation!).png"
+            let imageUrl = "http://192.168.0.152:8080/directions_to_carpark/location\(locationId!)_\(carLocation!).png"
             get_image(imageUrl, directionsImage)
         }
         else{

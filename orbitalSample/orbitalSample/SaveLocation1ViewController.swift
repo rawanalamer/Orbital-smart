@@ -13,7 +13,7 @@ class SaveLocation1ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var currentLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
+
     
     var message: String?
     var carparkId: String?
@@ -24,8 +24,6 @@ class SaveLocation1ViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.scrollView.minimumZoomScale = 1.0
-        self.scrollView.maximumZoomScale = 6.0
         
         // Do any additional setup after loading the view.
     }
@@ -54,7 +52,6 @@ class SaveLocation1ViewController: UIViewController, UIScrollViewDelegate {
             time.text = "Time parked: " + defaultTimeZoneStr
             
         
-           
             
             
         }
@@ -125,9 +122,7 @@ class SaveLocation1ViewController: UIViewController, UIScrollViewDelegate {
     func getTime()  -> NSDate!{
         return SaveLocation1ViewController.time
     }
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return image
-    }
+
 }
 
 

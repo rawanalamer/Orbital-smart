@@ -16,9 +16,9 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var tapped: ((StoreModel) -> Void)?
     var selectedStore : StoreModel = StoreModel()
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var locationLabel: UILabel!
+
     @IBOutlet weak var diagram: UIImageView!
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var picker: UIPickerView!
     
 
@@ -36,9 +36,7 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let homeModel = HomeModel()
         homeModel.delegate = self
         homeModel.downloadItems()
-        
-        self.scrollView.minimumZoomScale = 1.0
-        self.scrollView.maximumZoomScale = 6.0
+
         
         // Do any additional setup after loading the view.
     }
@@ -159,8 +157,5 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         print("performSegue works")
     }
     
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return diagram
-    }
 
 }
