@@ -8,12 +8,15 @@
 
 import UIKit
 
-class CarViewController: UIViewController {
+class CarViewController: UIViewController, UIScrollViewDelegate {
 
     
     @IBOutlet weak var directionButton: UIButton!
     @IBOutlet weak var carLocation: UIImageView!
     @IBOutlet weak var carLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
     var codeScanned: Bool!
     var carpark: SaveLocation1ViewController = SaveLocation1ViewController(nibName: nil, bundle: nil)
 
@@ -36,6 +39,8 @@ class CarViewController: UIViewController {
         else{
             let imageUrl = url!
             get_image(imageUrl, carLocation)
+            self.scrollView.minimumZoomScale = 1.0
+            self.scrollView.maximumZoomScale = 6.0
         }
 
         
@@ -94,16 +99,8 @@ class CarViewController: UIViewController {
         task.resume()
     }
 
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return carLocation
     }
-    */
 
 }

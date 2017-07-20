@@ -21,7 +21,11 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     
     var data : NSMutableData = NSMutableData()
     
+<<<<<<< HEAD
     let urlPath: String = "http://192.168.0.152:8080/listAllStores2.php" //this will be changed to the path where service.php lives
+=======
+    let urlPath: String = "http://169.254.66.208:8080/listAllStores2.php"
+>>>>>>> f588bb99b4a464cbe5a6a623be7c25e7ca6d5557
     
     func downloadItems() {
         

@@ -8,11 +8,12 @@
 
 import UIKit
 
-class SaveLocation1ViewController: UIViewController {
+class SaveLocation1ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var currentLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var message: String?
     var carparkId: String?
@@ -23,6 +24,8 @@ class SaveLocation1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 6.0
         
         // Do any additional setup after loading the view.
     }
@@ -36,8 +39,12 @@ class SaveLocation1ViewController: UIViewController {
 
         if message! !=  "No QR code detected"{
             currentLabel.text = "You have parked here:"
+<<<<<<< HEAD
 
             SaveLocation1ViewController.imageUrl = "http://192.168.0.152:8080/Locations/location\(carparkId!).png"
+=======
+            SaveLocation1ViewController.imageUrl = "http://192.168.0.19:8080/Locations/location\(carparkId!).png"
+>>>>>>> f588bb99b4a464cbe5a6a623be7c25e7ca6d5557
 
             SaveLocation1ViewController.id = carparkId
             get_image(SaveLocation1ViewController.imageUrl!, image)
@@ -120,6 +127,9 @@ class SaveLocation1ViewController: UIViewController {
     
     func getTime()  -> NSDate!{
         return SaveLocation1ViewController.time
+    }
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return image
     }
 }
 
