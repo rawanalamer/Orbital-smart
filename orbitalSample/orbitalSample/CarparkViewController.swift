@@ -62,7 +62,7 @@ class CarparkViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             if let dotRange = carparkId?.range(of: " ") {
                 carparkId?.removeSubrange(dotRange.lowerBound..<(carparkId?.endIndex)!)
                 carparkLabel.text = "You have parked here:"
-                let imageUrl = "http://192.168.0.152:8080/Locations/c1.png"
+                let imageUrl = "http://192.168.0.19:8080/Locations/c1.png"
                 get_image(imageUrl, locationImage)
             }
         }

@@ -30,7 +30,7 @@ class CarparkDirectionViewController: UIViewController {
         
         print(trimmedString)
 
-        let urlImage = "http://192.168.0.152:8080/carpark_directions/c1_" + trimmedString + ".png"
+        let urlImage = "http://192.168.0.19:8080/carpark_directions/c1_" + trimmedString + ".png"
         get_image(urlImage, directionImage)
 
 
