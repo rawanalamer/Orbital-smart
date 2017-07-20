@@ -36,11 +36,9 @@ class SaveLocation1ViewController: UIViewController {
 
         if message! !=  "No QR code detected"{
             currentLabel.text = "You have parked here:"
-<<<<<<< HEAD
-            SaveLocation1ViewController.imageUrl = "http://192.168.0.19:8080/Locations/location\(carparkId!).png"
-=======
+
             SaveLocation1ViewController.imageUrl = "http://192.168.0.152:8080/Locations/location\(carparkId!).png"
->>>>>>> 1c25b67413e948d2c5596b53a1cf65fa6b6f0b9e
+
             SaveLocation1ViewController.id = carparkId
             get_image(SaveLocation1ViewController.imageUrl!, image)
             

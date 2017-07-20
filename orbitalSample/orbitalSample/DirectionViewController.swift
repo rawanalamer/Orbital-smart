@@ -24,7 +24,7 @@ class DirectionViewController: UIViewController {
         
         let str = (self.selectedStore?.name)!
         let trimmedString = str.replacingOccurrences(of: " ", with: "")
-        let urlImage = "http://192.168.0.19:8080/directions/location\(locationId!)_" + trimmedString + ".png"
+        let urlImage = "http://192.168.0.152:8080/directions/location\(locationId!)_" + trimmedString + ".png"
         print(urlImage)
         get_image(urlImage, directionImage)
         

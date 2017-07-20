@@ -19,7 +19,7 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var diagram: UIImageView!
     @IBOutlet weak var picker: UIPickerView!
     
-    let locationURL = URL(string: "http://192.168.0.19:8888/searchLocation.php")
+    let locationURL = URL(string: "http://192.168.0.152:8888/searchLocation.php")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if message !=  "No QR code detected"{
             
             locationLabel.text = "Your current location:"
-            let imageUrl = "http://192.168.0.19:8080/Locations/location\(locationId!).png"
+            let imageUrl = "http://192.168.0.152:8080/Locations/location\(locationId!).png"
             print(imageUrl)
             
             get_image(imageUrl, diagram)
