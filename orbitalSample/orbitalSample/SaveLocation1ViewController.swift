@@ -39,12 +39,9 @@ class SaveLocation1ViewController: UIViewController, UIScrollViewDelegate {
 
         if message! !=  "No QR code detected"{
             currentLabel.text = "You have parked here:"
-<<<<<<< HEAD
+
 
             SaveLocation1ViewController.imageUrl = "http://192.168.0.152:8080/Locations/location\(carparkId!).png"
-=======
-            SaveLocation1ViewController.imageUrl = "http://192.168.0.19:8080/Locations/location\(carparkId!).png"
->>>>>>> f588bb99b4a464cbe5a6a623be7c25e7ca6d5557
 
             SaveLocation1ViewController.id = carparkId
             get_image(SaveLocation1ViewController.imageUrl!, image)

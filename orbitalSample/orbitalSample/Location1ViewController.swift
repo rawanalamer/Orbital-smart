@@ -21,13 +21,9 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var diagram: UIImageView!
     @IBOutlet weak var picker: UIPickerView!
     
-<<<<<<< HEAD
+
     let locationURL = URL(string: "http://192.168.0.152:8888/searchLocation.php")
-=======
-    
-    
-    let locationURL = URL(string: "http://192.168.0.19:8888/searchLocation.php")
->>>>>>> f588bb99b4a464cbe5a6a623be7c25e7ca6d5557
+
     
     
     

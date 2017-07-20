@@ -91,7 +91,7 @@ class CarparkDirectionsViewController: UIViewController, UIScrollViewDelegate {
     }
 
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        directionsImage
+        return self.directionsImage
     }
 
 }
