@@ -20,6 +20,7 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var diagram: UIImageView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
 
     let locationURL = URL(string: "http://192.168.0.19:8080/searchLocation.php")
@@ -29,6 +30,9 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 6.0
         
         self.picker.delegate = self
         self.picker.dataSource = self
@@ -155,6 +159,10 @@ class Location1ViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Manually call segue to detail view controller
         self.performSegue(withIdentifier: "directionSegue", sender: self)
         print("performSegue works")
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return diagram
     }
     
 
